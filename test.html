@@ -13,7 +13,7 @@
             <h1>Your favorite Twitter accounts</h1>
    		</div>
         <div id="items" data-role="content" data-theme="b">
-
+            <!-- Dynamic items go here -->
         </div>
 	</div>
 </body>
@@ -38,9 +38,12 @@
             date = tweet.created_at;
 
             var shtml = "";
-
+            
+            shtml = shtml + "<div data-role='collapsible' data-collapsed='false' class='tweet'>";
             shtml = shtml + "<h3>Tweet by " + user.name + "</h3>";
+            shtml = shtml + "' " + text + " '";
             shtml = shtml + "<p>Created on " + date + "</p>";
+            shtml = shtml + "</div>";
             
             $("#items").append(shtml);
         });
