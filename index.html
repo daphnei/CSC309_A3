@@ -19,8 +19,11 @@
 </body>
 
 <!-- LOADING JSON -->
-
+<!-- Don't worry, this is just testing and will be moved into a 
+separate file soon. -->
 <script type="text/javascript">
+    var USER_QUERY = "http://twitter.com/account/redirect_by_id?id=";
+
     $.getJSON("favs.json", function (tweets) {
         $.each(tweets, function() {
             tweet = this;
@@ -32,7 +35,9 @@
                 "screen_name": tweet.user.screen_name,
                 "location": tweet.user.location,
                 "description": tweet.user.description,
-                "url": tweet.user.url
+                "url": tweet.user.url,
+                "twitter_url": USER_QUERY + tweet.user.id_str,
+                "image": tweet.user.profile_image_url
             };
             text = tweet.text;
             date = tweet.created_at;
@@ -41,6 +46,9 @@
             
             shtml = shtml + "<div data-role='collapsible' data-collapsed='false' class='tweet'>";
             shtml = shtml + "<h3>Tweet by " + user.name + "</h3>";
+            shtml = shtml + "<a href='" + user.twitter_url + "'>";
+            shtml = shtml + "<img src='" + user.image + "'/>";
+            shtml = shtml + "</a><br/>";
             shtml = shtml + "' " + text + " '";
             shtml = shtml + "<p>Created on " + date + "</p>";
             shtml = shtml + "</div>";
