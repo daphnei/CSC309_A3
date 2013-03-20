@@ -9,11 +9,11 @@
 	<link rel="stylesheet" href="css/jqm-demos.css">
     
     <!-- User Scripts/CSS -->
-    <script src="js/load_favorites.js">
-    </script>
+    <script src="js/generate.js"></script>
+    <script src="js/favorites.js"></script>
     <link rel="stylesheet" href="css/custom.css">
 </head>
-<body onload="loadFavorites('./favs.json', '#items')">
+<body onload="favorites.loadFavorites('./favs.json', '#items')">
 	<div data-role="page">
         
         <!-- HEADER -->
@@ -22,10 +22,8 @@
    		</div>
         
         <!-- MAIN BODY -->
-        <div data-role="content" data-theme="b">
-            <ul id="items" data-role="listview" data-inset="true">
-                <!-- Dynamic items go here -->
-            </ul>
+        <div id="items" data-role="content" data-theme="b">
+            <!-- Dynamic items will be generated here -->
         </div>
 
         <!-- FOOTER -->
