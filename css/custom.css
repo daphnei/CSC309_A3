@@ -17,10 +17,6 @@
 		float:none; 
 	}
 
-    .tweet h3 {
-        color:#ff0;
-    }
-
     /* 1st breakpoint - Float B and C, leave A full width on top */ 
 	@media all and (min-width: 34em){
         .rwd-example div {
