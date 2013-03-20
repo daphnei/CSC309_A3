@@ -10,8 +10,40 @@
 <body>
 	<div data-role="page">
 		<div data-role="header" data-theme="f">
-        <h1>Your favorite Twitter accounts</h1>
+            <h1>Your favorite Twitter accounts</h1>
    		</div>
+        <div id="items" data-role="content" data-theme="b">
+
+        </div>
 	</div>
 </body>
+
+<!-- LOADING JSON -->
+
+<script type="text/javascript">
+    $.getJSON("favs.json", function (tweets) {
+        $.each(tweets, function() {
+            tweet = this;
+
+            var user, text, date;
+
+            user = {
+                "name": tweet.user.name,
+                "screen_name": tweet.user.screen_name,
+                "location": tweet.user.location,
+                "description": tweet.user.description,
+                "url": tweet.user.url
+            };
+            text = tweet.text;
+            date = tweet.created_at;
+
+            var shtml = "";
+
+            shtml = shtml + "<h3>Tweet by " + user.name + "</h3>";
+            shtml = shtml + "<p>Created on " + date + "</p>";
+            
+            $("#items").append(shtml);
+        });
+    });
+</script>
 </html>
