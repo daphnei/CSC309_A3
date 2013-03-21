@@ -33,8 +33,14 @@ var generate = {
     generateName: function(tweet) {
         var name = tweet.user.name;
         var screen_name = tweet.user.screen_name;
-
-        return "<h3>Tweet by " + name + " (@" + screen_name + ")</h3>";
+        var account = tweet.user.account;
+        
+        shtml = "";
+        shtml += "<div class='name'>";
+        shtml += "<h3>Tweet by " + name;
+        shtml += " (<a href='" + account + "'>@" + screen_name + "</a>)</h3>";
+        shtml += "</div>"
+        return shtml;
     },
 
     generateAvatar: function(tweet) {
@@ -42,15 +48,18 @@ var generate = {
         var avatar = tweet.user.image;
 
         shtml = "";
+        shtml += "<div class='avatar'>";
         shtml += "<a href='" + account + "'>";
         shtml += "<img src='" + avatar + "'/>";
         shtml += "</a>";
+        shtml += "</div>";
         return shtml;
     },
 
     generateText: function(tweet) {
         var text = tweet.data.text;
-
+        
+        
         return "<p>" + text + "</p>";
     },
 

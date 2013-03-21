@@ -1,0 +1,1407 @@
+[
+    {
+        "contributors": null, 
+        "coordinates": null, 
+        "created_at": "Thu Mar 21 00:34:15 +0000 2013", 
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        22, 
+                        27
+                    ], 
+                    "text": "YOLO"
+                }
+            ], 
+            "urls": [], 
+            "user_mentions": []
+        }, 
+        "favorite_count": 50, 
+        "favorited": true, 
+        "geo": null, 
+        "id": 314535389895483392, 
+        "id_str": "314535389895483392", 
+        "in_reply_to_screen_name": null, 
+        "in_reply_to_status_id": null, 
+        "in_reply_to_status_id_str": null, 
+        "in_reply_to_user_id": null, 
+        "in_reply_to_user_id_str": null, 
+        "lang": "en", 
+        "place": null, 
+        "retweet_count": 32, 
+        "retweeted": false, 
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>", 
+        "text": "Shots in the library. #YOLO", 
+        "truncated": false, 
+        "user": {
+            "contributors_enabled": false, 
+            "created_at": "Tue Jan 17 21:35:56 +0000 2012", 
+            "default_profile": false, 
+            "default_profile_image": false, 
+            "description": "Taking as many chances as taking shots. Speaking my fucking mind. ", 
+            "favourites_count": 1165, 
+            "follow_request_sent": false, 
+            "followers_count": 49374, 
+            "following": null, 
+            "friends_count": 248, 
+            "geo_enabled": false, 
+            "id": 466860961, 
+            "id_str": "466860961", 
+            "is_translator": false, 
+            "lang": "en", 
+            "listed_count": 36, 
+            "location": "Rack City Bitch", 
+            "name": "Party Girl.", 
+            "notifications": null, 
+            "profile_background_color": "C0DEED", 
+            "profile_background_image_url": "http://a0.twimg.com/profile_background_images/711718165/1007ecedd484ebca11ab454fbc4f4a94.jpeg", 
+            "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/711718165/1007ecedd484ebca11ab454fbc4f4a94.jpeg", 
+            "profile_background_tile": true, 
+            "profile_banner_url": "https://si0.twimg.com/profile_banners/466860961/1362538336", 
+            "profile_image_url": "http://a0.twimg.com/profile_images/3330576409/a646007bd13302bb6a162bdb72128a78_normal.jpeg", 
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/3330576409/a646007bd13302bb6a162bdb72128a78_normal.jpeg", 
+            "profile_link_color": "0084B4", 
+            "profile_sidebar_border_color": "FFFFFF", 
+            "profile_sidebar_fill_color": "DDEEF6", 
+            "profile_text_color": "333333", 
+            "profile_use_background_image": true, 
+            "protected": false, 
+            "screen_name": "partygirlprblmz", 
+            "statuses_count": 3716, 
+            "time_zone": "Central Time (US & Canada)", 
+            "url": null, 
+            "utc_offset": -21600, 
+            "verified": false
+        }
+    }, 
+    {
+        "contributors": null, 
+        "coordinates": null, 
+        "created_at": "Wed Mar 20 23:59:14 +0000 2013", 
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        123, 
+                        130
+                    ], 
+                    "text": "python"
+                }, 
+                {
+                    "indices": [
+                        131, 
+                        136
+                    ], 
+                    "text": "jobs"
+                }
+            ], 
+            "urls": [
+                {
+                    "display_url": "bit.ly/YZjwfe", 
+                    "expanded_url": "http://bit.ly/YZjwfe", 
+                    "indices": [
+                        100, 
+                        122
+                    ], 
+                    "url": "http://t.co/fSPlycC92R"
+                }
+            ], 
+            "user_mentions": []
+        }, 
+        "favorite_count": 2, 
+        "favorited": true, 
+        "geo": null, 
+        "id": 314526578841366529, 
+        "id_str": "314526578841366529", 
+        "in_reply_to_screen_name": null, 
+        "in_reply_to_status_id": null, 
+        "in_reply_to_status_id_str": null, 
+        "in_reply_to_user_id": null, 
+        "in_reply_to_user_id_str": null, 
+        "lang": "en", 
+        "place": null, 
+        "possibly_sensitive": false, 
+        "retweet_count": 0, 
+        "retweeted": false, 
+        "source": "<a href=\"http://twitterfeed.com\" rel=\"nofollow\">twitterfeed</a>", 
+        "text": "New Job Alert: Python Developer at EdgePoint Labs (Cambridge, MA): of development experience wit... http://t.co/fSPlycC92R #python #jobs", 
+        "truncated": false, 
+        "user": {
+            "contributors_enabled": false, 
+            "created_at": "Mon Dec 03 22:35:11 +0000 2012", 
+            "default_profile": true, 
+            "default_profile_image": false, 
+            "description": "The Twitter face of http://pythonjobs.com - the leading job board for Python and Django developers.", 
+            "favourites_count": 0, 
+            "follow_request_sent": false, 
+            "followers_count": 140, 
+            "following": null, 
+            "friends_count": 7, 
+            "geo_enabled": false, 
+            "id": 987552336, 
+            "id_str": "987552336", 
+            "is_translator": false, 
+            "lang": "en", 
+            "listed_count": 5, 
+            "location": "", 
+            "name": "Python Jobs", 
+            "notifications": null, 
+            "profile_background_color": "C0DEED", 
+            "profile_background_image_url": "http://a0.twimg.com/images/themes/theme1/bg.png", 
+            "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme1/bg.png", 
+            "profile_background_tile": false, 
+            "profile_image_url": "http://a0.twimg.com/profile_images/3393148980/ead2b798526bb828c452389888c325bd_normal.png", 
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/3393148980/ead2b798526bb828c452389888c325bd_normal.png", 
+            "profile_link_color": "0084B4", 
+            "profile_sidebar_border_color": "C0DEED", 
+            "profile_sidebar_fill_color": "DDEEF6", 
+            "profile_text_color": "333333", 
+            "profile_use_background_image": true, 
+            "protected": false, 
+            "screen_name": "pythonjob", 
+            "statuses_count": 412, 
+            "time_zone": null, 
+            "url": "http://pythonjobs.com", 
+            "utc_offset": null, 
+            "verified": false
+        }
+    }, 
+    {
+        "contributors": null, 
+        "coordinates": null, 
+        "created_at": "Wed Mar 20 22:21:01 +0000 2013", 
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        75, 
+                        82
+                    ], 
+                    "text": "python"
+                }
+            ], 
+            "urls": [
+                {
+                    "display_url": "pyq.io/so/15535897", 
+                    "expanded_url": "http://pyq.io/so/15535897", 
+                    "indices": [
+                        52, 
+                        74
+                    ], 
+                    "url": "http://t.co/i2XK4lpIiU"
+                }
+            ], 
+            "user_mentions": []
+        }, 
+        "favorite_count": 1, 
+        "favorited": true, 
+        "geo": null, 
+        "id": 314501862072152064, 
+        "id_str": "314501862072152064", 
+        "in_reply_to_screen_name": null, 
+        "in_reply_to_status_id": null, 
+        "in_reply_to_status_id_str": null, 
+        "in_reply_to_user_id": null, 
+        "in_reply_to_user_id_str": null, 
+        "lang": "en", 
+        "place": null, 
+        "possibly_sensitive": false, 
+        "retweet_count": 1, 
+        "retweeted": false, 
+        "source": "<a href=\"http://www.python-questions.net/\" rel=\"nofollow\">Python Questions</a>", 
+        "text": "xpath to select from child element to end of parent http://t.co/i2XK4lpIiU #python", 
+        "truncated": false, 
+        "user": {
+            "contributors_enabled": false, 
+            "created_at": "Sat Dec 31 19:25:06 +0000 2011", 
+            "default_profile": true, 
+            "default_profile_image": false, 
+            "description": "", 
+            "favourites_count": 0, 
+            "follow_request_sent": false, 
+            "followers_count": 996, 
+            "following": null, 
+            "friends_count": 0, 
+            "geo_enabled": false, 
+            "id": 451617602, 
+            "id_str": "451617602", 
+            "is_translator": false, 
+            "lang": "en", 
+            "listed_count": 99, 
+            "location": "", 
+            "name": "Python Questions", 
+            "notifications": null, 
+            "profile_background_color": "C0DEED", 
+            "profile_background_image_url": "http://a0.twimg.com/images/themes/theme1/bg.png", 
+            "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme1/bg.png", 
+            "profile_background_tile": false, 
+            "profile_image_url": "http://a0.twimg.com/profile_images/1726067520/python_normal.png", 
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/1726067520/python_normal.png", 
+            "profile_link_color": "0084B4", 
+            "profile_sidebar_border_color": "C0DEED", 
+            "profile_sidebar_fill_color": "DDEEF6", 
+            "profile_text_color": "333333", 
+            "profile_use_background_image": true, 
+            "protected": false, 
+            "screen_name": "PythonQuestions", 
+            "statuses_count": 88132, 
+            "time_zone": "Central Time (US & Canada)", 
+            "url": "http://python-questions.net/", 
+            "utc_offset": -21600, 
+            "verified": false
+        }
+    }, 
+    {
+        "contributors": null, 
+        "coordinates": null, 
+        "created_at": "Wed Mar 20 15:51:02 +0000 2013", 
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        75, 
+                        82
+                    ], 
+                    "text": "python"
+                }
+            ], 
+            "urls": [
+                {
+                    "display_url": "pyq.io/so/15528308", 
+                    "expanded_url": "http://pyq.io/so/15528308", 
+                    "indices": [
+                        52, 
+                        74
+                    ], 
+                    "url": "http://t.co/AydgEBq9v8"
+                }
+            ], 
+            "user_mentions": []
+        }, 
+        "favorite_count": 2, 
+        "favorited": true, 
+        "geo": null, 
+        "id": 314403719238275072, 
+        "id_str": "314403719238275072", 
+        "in_reply_to_screen_name": null, 
+        "in_reply_to_status_id": null, 
+        "in_reply_to_status_id_str": null, 
+        "in_reply_to_user_id": null, 
+        "in_reply_to_user_id_str": null, 
+        "lang": "en", 
+        "place": null, 
+        "possibly_sensitive": false, 
+        "retweet_count": 0, 
+        "retweeted": false, 
+        "source": "<a href=\"http://www.python-questions.net/\" rel=\"nofollow\">Python Questions</a>", 
+        "text": "What are those little \"u\" in my tuple? (python 2.7) http://t.co/AydgEBq9v8 #python", 
+        "truncated": false, 
+        "user": {
+            "contributors_enabled": false, 
+            "created_at": "Sat Dec 31 19:25:06 +0000 2011", 
+            "default_profile": true, 
+            "default_profile_image": false, 
+            "description": "", 
+            "favourites_count": 0, 
+            "follow_request_sent": false, 
+            "followers_count": 996, 
+            "following": null, 
+            "friends_count": 0, 
+            "geo_enabled": false, 
+            "id": 451617602, 
+            "id_str": "451617602", 
+            "is_translator": false, 
+            "lang": "en", 
+            "listed_count": 99, 
+            "location": "", 
+            "name": "Python Questions", 
+            "notifications": null, 
+            "profile_background_color": "C0DEED", 
+            "profile_background_image_url": "http://a0.twimg.com/images/themes/theme1/bg.png", 
+            "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme1/bg.png", 
+            "profile_background_tile": false, 
+            "profile_image_url": "http://a0.twimg.com/profile_images/1726067520/python_normal.png", 
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/1726067520/python_normal.png", 
+            "profile_link_color": "0084B4", 
+            "profile_sidebar_border_color": "C0DEED", 
+            "profile_sidebar_fill_color": "DDEEF6", 
+            "profile_text_color": "333333", 
+            "profile_use_background_image": true, 
+            "protected": false, 
+            "screen_name": "PythonQuestions", 
+            "statuses_count": 88132, 
+            "time_zone": "Central Time (US & Canada)", 
+            "url": "http://python-questions.net/", 
+            "utc_offset": -21600, 
+            "verified": false
+        }
+    }, 
+    {
+        "contributors": null, 
+        "coordinates": null, 
+        "created_at": "Wed Mar 20 15:40:56 +0000 2013", 
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        88, 
+                        100
+                    ], 
+                    "text": "programming"
+                }, 
+                {
+                    "indices": [
+                        101, 
+                        112
+                    ], 
+                    "text": "developers"
+                }
+            ], 
+            "urls": [
+                {
+                    "display_url": "gkl.st/4v_no", 
+                    "expanded_url": "http://gkl.st/4v_no", 
+                    "indices": [
+                        113, 
+                        135
+                    ], 
+                    "url": "http://t.co/nmajSvSlLx"
+                }
+            ], 
+            "user_mentions": []
+        }, 
+        "favorite_count": 1, 
+        "favorited": true, 
+        "geo": null, 
+        "id": 314401174763753472, 
+        "id_str": "314401174763753472", 
+        "in_reply_to_screen_name": null, 
+        "in_reply_to_status_id": null, 
+        "in_reply_to_status_id_str": null, 
+        "in_reply_to_user_id": null, 
+        "in_reply_to_user_id_str": null, 
+        "lang": "en", 
+        "place": null, 
+        "possibly_sensitive": false, 
+        "retweet_count": 2, 
+        "retweeted": false, 
+        "source": "<a href=\"http://geekli.st\" rel=\"nofollow\">Geeklist Inc</a>", 
+        "text": "\"Become a Developer Legend - Codetag\" A very interesting site to create and attempt ... #programming #developers http://t.co/nmajSvSlLx", 
+        "truncated": false, 
+        "user": {
+            "contributors_enabled": false, 
+            "created_at": "Tue Jan 05 03:58:01 +0000 2010", 
+            "default_profile": false, 
+            "default_profile_image": false, 
+            "description": "Dialogando con organismos anal\u00f3gicos y virtuales.", 
+            "favourites_count": 631, 
+            "follow_request_sent": false, 
+            "followers_count": 896, 
+            "following": null, 
+            "friends_count": 630, 
+            "geo_enabled": false, 
+            "id": 101949871, 
+            "id_str": "101949871", 
+            "is_translator": false, 
+            "lang": "es", 
+            "listed_count": 73, 
+            "location": "\u22ea Venezuela", 
+            "name": "Daniel Rodr\u00edguez", 
+            "notifications": null, 
+            "profile_background_color": "000000", 
+            "profile_background_image_url": "http://a0.twimg.com/profile_background_images/140223967/skull-bg-bk.png", 
+            "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/140223967/skull-bg-bk.png", 
+            "profile_background_tile": false, 
+            "profile_banner_url": "https://si0.twimg.com/profile_banners/101949871/1352732628", 
+            "profile_image_url": "http://a0.twimg.com/profile_images/3249673521/0e641c1b7bd720dec2c7f1f364513c8e_normal.png", 
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/3249673521/0e641c1b7bd720dec2c7f1f364513c8e_normal.png", 
+            "profile_link_color": "BDBDBD", 
+            "profile_sidebar_border_color": "FFFFFF", 
+            "profile_sidebar_fill_color": "050505", 
+            "profile_text_color": "666666", 
+            "profile_use_background_image": false, 
+            "protected": false, 
+            "screen_name": "sadasant", 
+            "statuses_count": 29016, 
+            "time_zone": "Caracas", 
+            "url": "http://sadasant.com/", 
+            "utc_offset": -16200, 
+            "verified": false
+        }
+    }, 
+    {
+        "contributors": null, 
+        "coordinates": null, 
+        "created_at": "Tue Mar 19 07:27:42 +0000 2013", 
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        122, 
+                        129
+                    ], 
+                    "text": "python"
+                }, 
+                {
+                    "indices": [
+                        130, 
+                        137
+                    ], 
+                    "text": "fsharp"
+                }
+            ], 
+            "urls": [
+                {
+                    "display_url": "dropbox.com/s/xknbe58zcvjh\u2026", 
+                    "expanded_url": "https://www.dropbox.com/s/xknbe58zcvjhzhv/PyCon2013.pptx", 
+                    "indices": [
+                        98, 
+                        121
+                    ], 
+                    "url": "https://t.co/VfaCPNrrFe"
+                }
+            ], 
+            "user_mentions": []
+        }, 
+        "favorite_count": 22, 
+        "favorited": true, 
+        "geo": null, 
+        "id": 313914662297149441, 
+        "id_str": "313914662297149441", 
+        "in_reply_to_screen_name": null, 
+        "in_reply_to_status_id": null, 
+        "in_reply_to_status_id_str": null, 
+        "in_reply_to_user_id": null, 
+        "in_reply_to_user_id_str": null, 
+        "lang": "en", 
+        "place": null, 
+        "possibly_sensitive": false, 
+        "retweet_count": 42, 
+        "retweeted": false, 
+        "source": "web", 
+        "text": "F# async 2007, C# async 2011, Python async 2013. The future of programming, one feature at a time https://t.co/VfaCPNrrFe #python #fsharp", 
+        "truncated": false, 
+        "user": {
+            "contributors_enabled": false, 
+            "created_at": "Sat Mar 21 11:17:51 +0000 2009", 
+            "default_profile": true, 
+            "default_profile_image": false, 
+            "description": "", 
+            "favourites_count": 41, 
+            "follow_request_sent": false, 
+            "followers_count": 2030, 
+            "following": null, 
+            "friends_count": 104, 
+            "geo_enabled": false, 
+            "id": 25663453, 
+            "id_str": "25663453", 
+            "is_translator": false, 
+            "lang": "en", 
+            "listed_count": 115, 
+            "location": "", 
+            "name": "Don Syme", 
+            "notifications": null, 
+            "profile_background_color": "C0DEED", 
+            "profile_background_image_url": "http://a0.twimg.com/images/themes/theme1/bg.png", 
+            "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme1/bg.png", 
+            "profile_background_tile": false, 
+            "profile_image_url": "http://a0.twimg.com/profile_images/2534151212/nzrzcybpx76l76hs1rvf_normal.jpeg", 
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/2534151212/nzrzcybpx76l76hs1rvf_normal.jpeg", 
+            "profile_link_color": "0084B4", 
+            "profile_sidebar_border_color": "C0DEED", 
+            "profile_sidebar_fill_color": "DDEEF6", 
+            "profile_text_color": "333333", 
+            "profile_use_background_image": true, 
+            "protected": false, 
+            "screen_name": "dsyme", 
+            "statuses_count": 2910, 
+            "time_zone": null, 
+            "url": "http://blogs.msdn.com/b/dsyme", 
+            "utc_offset": null, 
+            "verified": false
+        }
+    }, 
+    {
+        "contributors": null, 
+        "coordinates": null, 
+        "created_at": "Mon Mar 18 23:03:12 +0000 2013", 
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        20, 
+                        28
+                    ], 
+                    "text": "kittens"
+                }
+            ], 
+            "urls": [
+                {
+                    "display_url": "youtube.com/watch?v=OvXHbJ\u2026", 
+                    "expanded_url": "http://www.youtube.com/watch?v=OvXHbJzWMqI", 
+                    "indices": [
+                        30, 
+                        52
+                    ], 
+                    "url": "http://t.co/6ruwTIET3I"
+                }
+            ], 
+            "user_mentions": []
+        }, 
+        "favorite_count": 3, 
+        "favorited": true, 
+        "geo": null, 
+        "id": 313787701247741953, 
+        "id_str": "313787701247741953", 
+        "in_reply_to_screen_name": null, 
+        "in_reply_to_status_id": null, 
+        "in_reply_to_status_id_str": null, 
+        "in_reply_to_user_id": null, 
+        "in_reply_to_user_id_str": null, 
+        "lang": "en", 
+        "place": null, 
+        "possibly_sensitive": false, 
+        "retweet_count": 1, 
+        "retweeted": false, 
+        "source": "web", 
+        "text": "This is a basket of #kittens. http://t.co/6ruwTIET3I It will cheer you up.", 
+        "truncated": false, 
+        "user": {
+            "contributors_enabled": false, 
+            "created_at": "Thu Mar 11 20:29:23 +0000 2010", 
+            "default_profile": false, 
+            "default_profile_image": false, 
+            "description": "Cats. And people. Are important.  DC-area activist. Living green. Feminist. Foodie. Cat and human advocate. My favorite Amendment is the 1st. Protest=freespeech", 
+            "favourites_count": 21775, 
+            "follow_request_sent": false, 
+            "followers_count": 47933, 
+            "following": null, 
+            "friends_count": 41182, 
+            "geo_enabled": false, 
+            "id": 122165841, 
+            "id_str": "122165841", 
+            "is_translator": false, 
+            "lang": "en", 
+            "listed_count": 323, 
+            "location": "Washington DC & Venus", 
+            "name": "Cats Are Important", 
+            "notifications": null, 
+            "profile_background_color": "FFFFFF", 
+            "profile_background_image_url": "http://a0.twimg.com/profile_background_images/753804446/fe217dd186dd85780d7c0a065dab7a2b.gif", 
+            "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/753804446/fe217dd186dd85780d7c0a065dab7a2b.gif", 
+            "profile_background_tile": true, 
+            "profile_banner_url": "https://si0.twimg.com/profile_banners/122165841/1357169171", 
+            "profile_image_url": "http://a0.twimg.com/profile_images/3353350155/4ab282c70fcc0156c2910b52b2e63954_normal.jpeg", 
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/3353350155/4ab282c70fcc0156c2910b52b2e63954_normal.jpeg", 
+            "profile_link_color": "000000", 
+            "profile_sidebar_border_color": "FFFFFF", 
+            "profile_sidebar_fill_color": "FFFFFF", 
+            "profile_text_color": "000000", 
+            "profile_use_background_image": true, 
+            "protected": false, 
+            "screen_name": "catsrimportant", 
+            "statuses_count": 61391, 
+            "time_zone": "Quito", 
+            "url": null, 
+            "utc_offset": -18000, 
+            "verified": false
+        }
+    }, 
+    {
+        "contributors": null, 
+        "coordinates": null, 
+        "created_at": "Sun Mar 17 05:58:48 +0000 2013", 
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        96, 
+                        108
+                    ], 
+                    "text": "programming"
+                }
+            ], 
+            "urls": [
+                {
+                    "display_url": "bit.ly/10YzHJL", 
+                    "expanded_url": "http://bit.ly/10YzHJL", 
+                    "indices": [
+                        110, 
+                        132
+                    ], 
+                    "url": "http://t.co/TeCWVhdUuv"
+                }
+            ], 
+            "user_mentions": []
+        }, 
+        "favorite_count": 3, 
+        "favorited": true, 
+        "geo": null, 
+        "id": 313167513124995072, 
+        "id_str": "313167513124995072", 
+        "in_reply_to_screen_name": null, 
+        "in_reply_to_status_id": null, 
+        "in_reply_to_status_id_str": null, 
+        "in_reply_to_user_id": null, 
+        "in_reply_to_user_id_str": null, 
+        "lang": "en", 
+        "place": null, 
+        "possibly_sensitive": false, 
+        "retweet_count": 3, 
+        "retweeted": false, 
+        "source": "<a href=\"http://twitterfeed.com\" rel=\"nofollow\">twitterfeed</a>", 
+        "text": "How computationally intensive are various operators? Is this something one should consider when #programming? http://t.co/TeCWVhdUuv", 
+        "truncated": false, 
+        "user": {
+            "contributors_enabled": false, 
+            "created_at": "Tue Mar 24 14:19:39 +0000 2009", 
+            "default_profile": false, 
+            "default_profile_image": false, 
+            "description": "Get the latest updates about programming, programmers, web dev and computer science!", 
+            "favourites_count": 2, 
+            "follow_request_sent": false, 
+            "followers_count": 5474, 
+            "following": null, 
+            "friends_count": 53, 
+            "geo_enabled": false, 
+            "id": 26244954, 
+            "id_str": "26244954", 
+            "is_translator": false, 
+            "lang": "en", 
+            "listed_count": 196, 
+            "location": "Across the Web", 
+            "name": "Programming Tweets", 
+            "notifications": null, 
+            "profile_background_color": "1A1B1F", 
+            "profile_background_image_url": "http://a0.twimg.com/images/themes/theme9/bg.gif", 
+            "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme9/bg.gif", 
+            "profile_background_tile": false, 
+            "profile_image_url": "http://a0.twimg.com/profile_images/108550788/Exquisite-binary_normal.png", 
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/108550788/Exquisite-binary_normal.png", 
+            "profile_link_color": "2FC2EF", 
+            "profile_sidebar_border_color": "181A1E", 
+            "profile_sidebar_fill_color": "252429", 
+            "profile_text_color": "666666", 
+            "profile_use_background_image": true, 
+            "protected": false, 
+            "screen_name": "developer_news", 
+            "statuses_count": 4369, 
+            "time_zone": "Pacific Time (US & Canada)", 
+            "url": null, 
+            "utc_offset": -28800, 
+            "verified": false
+        }
+    }, 
+    {
+        "contributors": null, 
+        "coordinates": null, 
+        "created_at": "Sun Mar 17 00:40:20 +0000 2013", 
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        44, 
+                        53
+                    ], 
+                    "text": "drumming"
+                }, 
+                {
+                    "indices": [
+                        54, 
+                        64
+                    ], 
+                    "text": "jmwedding"
+                }
+            ], 
+            "urls": [
+                {
+                    "display_url": "instagr.am/p/W8Fg4YHIHX/", 
+                    "expanded_url": "http://instagr.am/p/W8Fg4YHIHX/", 
+                    "indices": [
+                        65, 
+                        87
+                    ], 
+                    "url": "http://t.co/9eiPCsrMJc"
+                }
+            ], 
+            "user_mentions": []
+        }, 
+        "favorite_count": 2, 
+        "favorited": true, 
+        "geo": null, 
+        "id": 313087370482286592, 
+        "id_str": "313087370482286592", 
+        "in_reply_to_screen_name": null, 
+        "in_reply_to_status_id": null, 
+        "in_reply_to_status_id_str": null, 
+        "in_reply_to_user_id": null, 
+        "in_reply_to_user_id_str": null, 
+        "lang": "en", 
+        "place": null, 
+        "possibly_sensitive": false, 
+        "retweet_count": 0, 
+        "retweeted": false, 
+        "source": "<a href=\"http://instagram.com\" rel=\"nofollow\">Instagram</a>", 
+        "text": "This drummer just pulled a spectacular solo #drumming #jmwedding http://t.co/9eiPCsrMJc", 
+        "truncated": false, 
+        "user": {
+            "contributors_enabled": false, 
+            "created_at": "Sat Jun 25 18:37:19 +0000 2011", 
+            "default_profile": false, 
+            "default_profile_image": false, 
+            "description": "Married to the Nikki. I make the beats, she makes the melody... Fascinated by culture, music, business and history.", 
+            "favourites_count": 166, 
+            "follow_request_sent": false, 
+            "followers_count": 270, 
+            "following": null, 
+            "friends_count": 329, 
+            "geo_enabled": false, 
+            "id": 323953982, 
+            "id_str": "323953982", 
+            "is_translator": false, 
+            "lang": "en", 
+            "listed_count": 0, 
+            "location": "America", 
+            "name": "Jesse Parsons", 
+            "notifications": null, 
+            "profile_background_color": "01061C", 
+            "profile_background_image_url": "http://a0.twimg.com/profile_background_images/678090363/3fe2c7b7ad99a36f8f1aa132e91d99eb.jpeg", 
+            "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/678090363/3fe2c7b7ad99a36f8f1aa132e91d99eb.jpeg", 
+            "profile_background_tile": false, 
+            "profile_banner_url": "https://si0.twimg.com/profile_banners/323953982/1359608870", 
+            "profile_image_url": "http://a0.twimg.com/profile_images/2699715573/d64b320b516cfd7aeef973d9115d2544_normal.jpeg", 
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/2699715573/d64b320b516cfd7aeef973d9115d2544_normal.jpeg", 
+            "profile_link_color": "3855AD", 
+            "profile_sidebar_border_color": "000000", 
+            "profile_sidebar_fill_color": "DDEEF6", 
+            "profile_text_color": "333333", 
+            "profile_use_background_image": true, 
+            "protected": false, 
+            "screen_name": "JesseDrums", 
+            "statuses_count": 1236, 
+            "time_zone": "Central Time (US & Canada)", 
+            "url": "http://www.nikkikummerow.com", 
+            "utc_offset": -21600, 
+            "verified": false
+        }
+    }, 
+    {
+        "contributors": null, 
+        "coordinates": null, 
+        "created_at": "Sat Mar 16 14:58:38 +0000 2013", 
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        17, 
+                        29
+                    ], 
+                    "text": "programming"
+                }
+            ], 
+            "urls": [
+                {
+                    "display_url": "bit.ly/WoVXOf", 
+                    "expanded_url": "http://bit.ly/WoVXOf", 
+                    "indices": [
+                        51, 
+                        73
+                    ], 
+                    "url": "http://t.co/ucZUoMFsjk"
+                }
+            ], 
+            "user_mentions": []
+        }, 
+        "favorite_count": 4, 
+        "favorited": true, 
+        "geo": null, 
+        "id": 312940981135749120, 
+        "id_str": "312940981135749120", 
+        "in_reply_to_screen_name": null, 
+        "in_reply_to_status_id": null, 
+        "in_reply_to_status_id_str": null, 
+        "in_reply_to_user_id": null, 
+        "in_reply_to_user_id_str": null, 
+        "lang": "en", 
+        "place": null, 
+        "possibly_sensitive": false, 
+        "retweet_count": 3, 
+        "retweeted": false, 
+        "source": "<a href=\"http://twitterfeed.com\" rel=\"nofollow\">twitterfeed</a>", 
+        "text": "Feature-Oriented #programming with Object Algebras http://t.co/ucZUoMFsjk", 
+        "truncated": false, 
+        "user": {
+            "contributors_enabled": false, 
+            "created_at": "Tue Mar 24 14:19:39 +0000 2009", 
+            "default_profile": false, 
+            "default_profile_image": false, 
+            "description": "Get the latest updates about programming, programmers, web dev and computer science!", 
+            "favourites_count": 2, 
+            "follow_request_sent": false, 
+            "followers_count": 5474, 
+            "following": null, 
+            "friends_count": 53, 
+            "geo_enabled": false, 
+            "id": 26244954, 
+            "id_str": "26244954", 
+            "is_translator": false, 
+            "lang": "en", 
+            "listed_count": 196, 
+            "location": "Across the Web", 
+            "name": "Programming Tweets", 
+            "notifications": null, 
+            "profile_background_color": "1A1B1F", 
+            "profile_background_image_url": "http://a0.twimg.com/images/themes/theme9/bg.gif", 
+            "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme9/bg.gif", 
+            "profile_background_tile": false, 
+            "profile_image_url": "http://a0.twimg.com/profile_images/108550788/Exquisite-binary_normal.png", 
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/108550788/Exquisite-binary_normal.png", 
+            "profile_link_color": "2FC2EF", 
+            "profile_sidebar_border_color": "181A1E", 
+            "profile_sidebar_fill_color": "252429", 
+            "profile_text_color": "666666", 
+            "profile_use_background_image": true, 
+            "protected": false, 
+            "screen_name": "developer_news", 
+            "statuses_count": 4369, 
+            "time_zone": "Pacific Time (US & Canada)", 
+            "url": null, 
+            "utc_offset": -28800, 
+            "verified": false
+        }
+    }, 
+    {
+        "contributors": null, 
+        "coordinates": null, 
+        "created_at": "Thu Mar 14 22:30:15 +0000 2013", 
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        69, 
+                        76
+                    ], 
+                    "text": "Python"
+                }
+            ], 
+            "urls": [
+                {
+                    "display_url": "buff.ly/Yoo8LF", 
+                    "expanded_url": "http://buff.ly/Yoo8LF", 
+                    "indices": [
+                        77, 
+                        99
+                    ], 
+                    "url": "http://t.co/p4DtKvgMDC"
+                }
+            ], 
+            "user_mentions": []
+        }, 
+        "favorite_count": 14, 
+        "favorited": true, 
+        "geo": null, 
+        "id": 312329856329326592, 
+        "id_str": "312329856329326592", 
+        "in_reply_to_screen_name": null, 
+        "in_reply_to_status_id": null, 
+        "in_reply_to_status_id_str": null, 
+        "in_reply_to_user_id": null, 
+        "in_reply_to_user_id_str": null, 
+        "lang": "en", 
+        "place": null, 
+        "possibly_sensitive": false, 
+        "retweet_count": 10, 
+        "retweeted": false, 
+        "source": "<a href=\"http://bufferapp.com\" rel=\"nofollow\">Buffer</a>", 
+        "text": "Bamboo: Dynamic data analysis over the web -- Powered by MongoDB and #Python http://t.co/p4DtKvgMDC", 
+        "truncated": false, 
+        "user": {
+            "contributors_enabled": false, 
+            "created_at": "Fri Dec 12 17:21:18 +0000 2008", 
+            "default_profile": false, 
+            "default_profile_image": false, 
+            "description": "MongoDB is a JSON-based, document database with dynamic schemas  | http://www.facebook.com/MongoDB", 
+            "favourites_count": 12, 
+            "follow_request_sent": false, 
+            "followers_count": 31989, 
+            "following": null, 
+            "friends_count": 20, 
+            "geo_enabled": true, 
+            "id": 18080585, 
+            "id_str": "18080585", 
+            "is_translator": false, 
+            "lang": "en", 
+            "listed_count": 1806, 
+            "location": "", 
+            "name": "MongoDB", 
+            "notifications": null, 
+            "profile_background_color": "529747", 
+            "profile_background_image_url": "http://a0.twimg.com/profile_background_images/619655093/767dji3m3k684nza7w9z.png", 
+            "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/619655093/767dji3m3k684nza7w9z.png", 
+            "profile_background_tile": false, 
+            "profile_banner_url": "https://si0.twimg.com/profile_banners/18080585/1349463085", 
+            "profile_image_url": "http://a0.twimg.com/profile_images/2452709870/wo2h8r0qy8d5lsxe5lgd_normal.png", 
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/2452709870/wo2h8r0qy8d5lsxe5lgd_normal.png", 
+            "profile_link_color": "43B02A", 
+            "profile_sidebar_border_color": "829D5E", 
+            "profile_sidebar_fill_color": "99CC33", 
+            "profile_text_color": "3E4415", 
+            "profile_use_background_image": true, 
+            "protected": false, 
+            "screen_name": "MongoDB", 
+            "statuses_count": 2690, 
+            "time_zone": "Eastern Time (US & Canada)", 
+            "url": "http://mongodb.org/", 
+            "utc_offset": -18000, 
+            "verified": false
+        }
+    }, 
+    {
+        "contributors": null, 
+        "coordinates": null, 
+        "created_at": "Mon Mar 11 04:36:05 +0000 2013", 
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        0, 
+                        7
+                    ], 
+                    "text": "jQuery"
+                }, 
+                {
+                    "indices": [
+                        124, 
+                        136
+                    ], 
+                    "text": "Programming"
+                }
+            ], 
+            "urls": [
+                {
+                    "display_url": "bit.ly/Xg1mbU", 
+                    "expanded_url": "http://bit.ly/Xg1mbU", 
+                    "indices": [
+                        101, 
+                        123
+                    ], 
+                    "url": "http://t.co/9n4do2H3JG"
+                }
+            ], 
+            "user_mentions": []
+        }, 
+        "favorite_count": 1, 
+        "favorited": true, 
+        "geo": null, 
+        "id": 310972369999106048, 
+        "id_str": "310972369999106048", 
+        "in_reply_to_screen_name": null, 
+        "in_reply_to_status_id": null, 
+        "in_reply_to_status_id_str": null, 
+        "in_reply_to_user_id": null, 
+        "in_reply_to_user_id_str": null, 
+        "lang": "en", 
+        "place": null, 
+        "possibly_sensitive": false, 
+        "retweet_count": 0, 
+        "retweeted": false, 
+        "source": "<a href=\"http://twitterfeed.com\" rel=\"nofollow\">twitterfeed</a>", 
+        "text": "#jQuery-Prototype Small jQuery Tool Redesign on Existing Site by xander85: This should be easy fo... http://t.co/9n4do2H3JG #Programming", 
+        "truncated": false, 
+        "user": {
+            "contributors_enabled": false, 
+            "created_at": "Thu Feb 25 16:45:36 +0000 2010", 
+            "default_profile": false, 
+            "default_profile_image": false, 
+            "description": "In between goals is a thing called life, that has to be lived and enjoyed.   --SidCaesar | fresh node.js news especially for node hackers : @nodejsTweets", 
+            "favourites_count": 24, 
+            "follow_request_sent": false, 
+            "followers_count": 3291, 
+            "following": null, 
+            "friends_count": 2367, 
+            "geo_enabled": false, 
+            "id": 117459709, 
+            "id_str": "117459709", 
+            "is_translator": false, 
+            "lang": "en", 
+            "listed_count": 329, 
+            "location": "", 
+            "name": "jQuery news", 
+            "notifications": null, 
+            "profile_background_color": "000000", 
+            "profile_background_image_url": "http://a0.twimg.com/profile_background_images/93612855/background.jpg", 
+            "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/93612855/background.jpg", 
+            "profile_background_tile": false, 
+            "profile_image_url": "http://a0.twimg.com/profile_images/2398101754/r02chptka6d3pijqdnjh_normal.png", 
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/2398101754/r02chptka6d3pijqdnjh_normal.png", 
+            "profile_link_color": "E045CE", 
+            "profile_sidebar_border_color": "FF0303", 
+            "profile_sidebar_fill_color": "000000", 
+            "profile_text_color": "009AF9", 
+            "profile_use_background_image": true, 
+            "protected": false, 
+            "screen_name": "jQueryBot", 
+            "statuses_count": 63526, 
+            "time_zone": "Kolkata", 
+            "url": null, 
+            "utc_offset": 19800, 
+            "verified": false
+        }
+    }, 
+    {
+        "contributors": null, 
+        "coordinates": null, 
+        "created_at": "Mon Mar 04 06:11:38 +0000 2013", 
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        115, 
+                        123
+                    ], 
+                    "text": "compsci"
+                }, 
+                {
+                    "indices": [
+                        124, 
+                        136
+                    ], 
+                    "text": "programming"
+                }
+            ], 
+            "urls": [
+                {
+                    "display_url": "nlsh.in/XNjpUf", 
+                    "expanded_url": "http://nlsh.in/XNjpUf", 
+                    "indices": [
+                        92, 
+                        114
+                    ], 
+                    "url": "http://t.co/uLMrVNc2VK"
+                }
+            ], 
+            "user_mentions": []
+        }, 
+        "favorite_count": 1, 
+        "favorited": true, 
+        "geo": null, 
+        "id": 308459701916545024, 
+        "id_str": "308459701916545024", 
+        "in_reply_to_screen_name": null, 
+        "in_reply_to_status_id": null, 
+        "in_reply_to_status_id_str": null, 
+        "in_reply_to_user_id": null, 
+        "in_reply_to_user_id_str": null, 
+        "lang": "en", 
+        "place": null, 
+        "possibly_sensitive": false, 
+        "retweet_count": 1, 
+        "retweeted": false, 
+        "source": "<a href=\"http://bufferapp.com\" rel=\"nofollow\">Buffer</a>", 
+        "text": "9 years old article, still holds true - Why Learning Assembly Language Is Still a Good Idea http://t.co/uLMrVNc2VK #compsci #programming", 
+        "truncated": false, 
+        "user": {
+            "contributors_enabled": false, 
+            "created_at": "Mon Dec 14 13:25:20 +0000 2009", 
+            "default_profile": false, 
+            "default_profile_image": false, 
+            "description": "#Python #Linux #PHP #C #CPP #Android #geek #engineer #sysadmin\r\n\r\nWarning: Don't try silly jokes on me. I have the mysterious ability to crumble & destroy 'em.", 
+            "favourites_count": 182, 
+            "follow_request_sent": false, 
+            "followers_count": 897, 
+            "following": null, 
+            "friends_count": 697, 
+            "geo_enabled": true, 
+            "id": 96760234, 
+            "id_str": "96760234", 
+            "is_translator": false, 
+            "lang": "en", 
+            "listed_count": 41, 
+            "location": "Pimpri Chinchwad, India ", 
+            "name": "Nilesh Govindrajan", 
+            "notifications": null, 
+            "profile_background_color": "0099B9", 
+            "profile_background_image_url": "http://a0.twimg.com/images/themes/theme4/bg.gif", 
+            "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme4/bg.gif", 
+            "profile_background_tile": false, 
+            "profile_banner_url": "https://si0.twimg.com/profile_banners/96760234/1358948398", 
+            "profile_image_url": "http://a0.twimg.com/profile_images/2616809368/zvjx5ghi0fe65wzr61cd_normal.png", 
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/2616809368/zvjx5ghi0fe65wzr61cd_normal.png", 
+            "profile_link_color": "0099B9", 
+            "profile_sidebar_border_color": "FFFFFF", 
+            "profile_sidebar_fill_color": "95E8EC", 
+            "profile_text_color": "3C3940", 
+            "profile_use_background_image": true, 
+            "protected": false, 
+            "screen_name": "nileshgr", 
+            "statuses_count": 53700, 
+            "time_zone": "Mumbai", 
+            "url": "http://nileshgr.com", 
+            "utc_offset": 19800, 
+            "verified": false
+        }
+    }, 
+    {
+        "contributors": null, 
+        "coordinates": null, 
+        "created_at": "Sat Feb 16 15:49:43 +0000 2013", 
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        51, 
+                        63
+                    ], 
+                    "text": "programming"
+                }
+            ], 
+            "urls": [
+                {
+                    "display_url": "youtu.be/kp_zigxMS-Y?t=\u2026", 
+                    "expanded_url": "http://youtu.be/kp_zigxMS-Y?t=27m43s", 
+                    "indices": [
+                        114, 
+                        134
+                    ], 
+                    "url": "http://t.co/dmcVi8g8"
+                }
+            ], 
+            "user_mentions": []
+        }, 
+        "favorite_count": 1, 
+        "favorited": true, 
+        "geo": null, 
+        "id": 302806976717529088, 
+        "id_str": "302806976717529088", 
+        "in_reply_to_screen_name": null, 
+        "in_reply_to_status_id": null, 
+        "in_reply_to_status_id_str": null, 
+        "in_reply_to_user_id": null, 
+        "in_reply_to_user_id_str": null, 
+        "lang": "en", 
+        "place": null, 
+        "possibly_sensitive": false, 
+        "retweet_count": 0, 
+        "retweeted": false, 
+        "source": "<a href=\"http://twitter.com/tweetbutton\" rel=\"nofollow\">Tweet Button</a>", 
+        "text": "Can we make it a national effort to add a computer #programming high-school requirement? Obama answers in Hangout http://t.co/dmcVi8g8", 
+        "truncated": false, 
+        "user": {
+            "contributors_enabled": false, 
+            "created_at": "Wed Sep 07 22:10:00 +0000 2011", 
+            "default_profile": false, 
+            "default_profile_image": false, 
+            "description": "Engineering professor, computational scientist, jazz buff, techie, mac fan, academic writer and font geek.", 
+            "favourites_count": 86, 
+            "follow_request_sent": false, 
+            "followers_count": 453, 
+            "following": null, 
+            "friends_count": 307, 
+            "geo_enabled": false, 
+            "id": 369758524, 
+            "id_str": "369758524", 
+            "is_translator": false, 
+            "lang": "en", 
+            "listed_count": 16, 
+            "location": "Boston, MA", 
+            "name": "Lorena Barba", 
+            "notifications": null, 
+            "profile_background_color": "B3B3B3", 
+            "profile_background_image_url": "http://a0.twimg.com/images/themes/theme18/bg.gif", 
+            "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme18/bg.gif", 
+            "profile_background_tile": false, 
+            "profile_banner_url": "https://si0.twimg.com/profile_banners/369758524/1353498227", 
+            "profile_image_url": "http://a0.twimg.com/profile_images/1870376708/Barba-Lorena-2011a-square_normal.png", 
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/1870376708/Barba-Lorena-2011a-square_normal.png", 
+            "profile_link_color": "83000A", 
+            "profile_sidebar_border_color": "EEEEEE", 
+            "profile_sidebar_fill_color": "F6F6F6", 
+            "profile_text_color": "333333", 
+            "profile_use_background_image": true, 
+            "protected": false, 
+            "screen_name": "LorenaABarba", 
+            "statuses_count": 1403, 
+            "time_zone": "Atlantic Time (Canada)", 
+            "url": "http://about.me/lorenabarba", 
+            "utc_offset": -14400, 
+            "verified": false
+        }
+    }, 
+    {
+        "contributors": null, 
+        "coordinates": null, 
+        "created_at": "Tue Feb 12 05:59:51 +0000 2013", 
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        96, 
+                        100
+                    ], 
+                    "text": "dev"
+                }, 
+                {
+                    "indices": [
+                        101, 
+                        113
+                    ], 
+                    "text": "programming"
+                }
+            ], 
+            "urls": [
+                {
+                    "display_url": "feedproxy.google.com/~r/OmMalik/~3/\u2026", 
+                    "expanded_url": "http://feedproxy.google.com/~r/OmMalik/~3/t_v_Q4u42KI/story01.htm", 
+                    "indices": [
+                        114, 
+                        134
+                    ], 
+                    "url": "http://t.co/w1Ed2xX6"
+                }
+            ], 
+            "user_mentions": []
+        }, 
+        "favorite_count": 1, 
+        "favorited": true, 
+        "geo": null, 
+        "id": 301208977352564736, 
+        "id_str": "301208977352564736", 
+        "in_reply_to_screen_name": null, 
+        "in_reply_to_status_id": null, 
+        "in_reply_to_status_id_str": null, 
+        "in_reply_to_user_id": null, 
+        "in_reply_to_user_id_str": null, 
+        "lang": "en", 
+        "place": null, 
+        "possibly_sensitive": false, 
+        "retweet_count": 0, 
+        "retweeted": false, 
+        "source": "<a href=\"https://itunes.apple.com/us/app/reeder/id325502379?mt=8&uo=4\" rel=\"nofollow\">Reeder on iOS</a>", 
+        "text": "Bill Gates: I am surprised new languages have not made more progress in simplifying programming #dev #programming http://t.co/w1Ed2xX6", 
+        "truncated": false, 
+        "user": {
+            "contributors_enabled": false, 
+            "created_at": "Wed Dec 03 09:49:57 +0000 2008", 
+            "default_profile": false, 
+            "default_profile_image": false, 
+            "description": "Co-founder of 99SQUARED \u2605 KUOOB - Smart Offers \u2605 SQUARE:CODE - #QRCode Software | Published Author #Future50 \u2665 #mobile #NFC RT not = endorsement", 
+            "favourites_count": 54, 
+            "follow_request_sent": false, 
+            "followers_count": 1969, 
+            "following": null, 
+            "friends_count": 602, 
+            "geo_enabled": false, 
+            "id": 17833301, 
+            "id_str": "17833301", 
+            "is_translator": false, 
+            "lang": "en", 
+            "listed_count": 167, 
+            "location": "Swede living in Norfolk, UK.", 
+            "name": "Johannes Ahrenfelt", 
+            "notifications": null, 
+            "profile_background_color": "59BEE4", 
+            "profile_background_image_url": "http://a0.twimg.com/profile_background_images/727139856/7b1cad0896d22d75b85f5f86fc69b59f.jpeg", 
+            "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/727139856/7b1cad0896d22d75b85f5f86fc69b59f.jpeg", 
+            "profile_background_tile": false, 
+            "profile_image_url": "http://a0.twimg.com/profile_images/2721349536/79e38808e3712cef1c4cce681ea27d38_normal.png", 
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/2721349536/79e38808e3712cef1c4cce681ea27d38_normal.png", 
+            "profile_link_color": "8FCAE0", 
+            "profile_sidebar_border_color": "4BB7DF", 
+            "profile_sidebar_fill_color": "191F22", 
+            "profile_text_color": "4BB7DF", 
+            "profile_use_background_image": true, 
+            "protected": false, 
+            "screen_name": "ahrenfelt", 
+            "statuses_count": 5418, 
+            "time_zone": "London", 
+            "url": "http://www.99squared.com/", 
+            "utc_offset": 0, 
+            "verified": false
+        }
+    }, 
+    {
+        "contributors": null, 
+        "coordinates": null, 
+        "created_at": "Tue Feb 05 00:24:05 +0000 2013", 
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        35, 
+                        47
+                    ], 
+                    "text": "programming"
+                }
+            ], 
+            "urls": [
+                {
+                    "display_url": "bit.ly/11LHBVJ", 
+                    "expanded_url": "http://bit.ly/11LHBVJ", 
+                    "indices": [
+                        91, 
+                        111
+                    ], 
+                    "url": "http://t.co/L6LFIIsu"
+                }
+            ], 
+            "user_mentions": []
+        }, 
+        "favorite_count": 1, 
+        "favorited": true, 
+        "geo": null, 
+        "id": 298587765447204865, 
+        "id_str": "298587765447204865", 
+        "in_reply_to_screen_name": null, 
+        "in_reply_to_status_id": null, 
+        "in_reply_to_status_id_str": null, 
+        "in_reply_to_user_id": null, 
+        "in_reply_to_user_id_str": null, 
+        "lang": "en", 
+        "place": null, 
+        "possibly_sensitive": false, 
+        "retweet_count": 2, 
+        "retweeted": false, 
+        "source": "<a href=\"http://twitterfeed.com\" rel=\"nofollow\">twitterfeed</a>", 
+        "text": "\"You appear to be advocating a new #programming language. Here is why it will not work...\" http://t.co/L6LFIIsu", 
+        "truncated": false, 
+        "user": {
+            "contributors_enabled": false, 
+            "created_at": "Tue Mar 24 14:19:39 +0000 2009", 
+            "default_profile": false, 
+            "default_profile_image": false, 
+            "description": "Get the latest updates about programming, programmers, web dev and computer science!", 
+            "favourites_count": 2, 
+            "follow_request_sent": false, 
+            "followers_count": 5474, 
+            "following": null, 
+            "friends_count": 53, 
+            "geo_enabled": false, 
+            "id": 26244954, 
+            "id_str": "26244954", 
+            "is_translator": false, 
+            "lang": "en", 
+            "listed_count": 196, 
+            "location": "Across the Web", 
+            "name": "Programming Tweets", 
+            "notifications": null, 
+            "profile_background_color": "1A1B1F", 
+            "profile_background_image_url": "http://a0.twimg.com/images/themes/theme9/bg.gif", 
+            "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme9/bg.gif", 
+            "profile_background_tile": false, 
+            "profile_image_url": "http://a0.twimg.com/profile_images/108550788/Exquisite-binary_normal.png", 
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/108550788/Exquisite-binary_normal.png", 
+            "profile_link_color": "2FC2EF", 
+            "profile_sidebar_border_color": "181A1E", 
+            "profile_sidebar_fill_color": "252429", 
+            "profile_text_color": "666666", 
+            "profile_use_background_image": true, 
+            "protected": false, 
+            "screen_name": "developer_news", 
+            "statuses_count": 4369, 
+            "time_zone": "Pacific Time (US & Canada)", 
+            "url": null, 
+            "utc_offset": -28800, 
+            "verified": false
+        }
+    }
+]

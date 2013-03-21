@@ -29,7 +29,7 @@ var favorites = {
                     location: tweet.user.location,
                     description: tweet.user.description,
                     url: tweet.user.url,
-                    account: USER_QUERY + tweet.user.id_str,
+                    account: "http://twitter.com/" + tweet.user.screen_name,
                     image: tweet.user.profile_image_url
                 };
                 
@@ -46,6 +46,7 @@ var favorites = {
                 // see generate.js for generateHTML
                 var html = generate.generateHTML({ user: user, data: data });
                 $(target).append(html);
+                $(target).trigger("create");
             });
         });
     },
