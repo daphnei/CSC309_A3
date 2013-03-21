@@ -16,9 +16,9 @@ var generate = {
 
         //shtml += "<div data-role='collapsible' data-collapsed='false' class='tweet'> <h4>Hello</h4><p>World</p></div>";
 
-        // shtml += "<li data-collapsed='false' class='tweet'>";
+        shtml += "<li>";
         
-        // shtml += this.generateName(tweet);
+        shtml += this.generateName(tweet);
         // shtml += this.generateAvatar(tweet);
         // shtml += BREAK;
         // shtml += this.generateText(tweet);
