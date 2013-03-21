@@ -14,19 +14,21 @@ var generate = {
     generateHTML: function(tweet) {
         var shtml = "";
 
-        shtml += "<div data-role='collapsible' data-collapsed='false' class='tweet'>";
+        //shtml += "<div data-role='collapsible' data-collapsed='false' class='tweet'> <h4>Hello</h4><p>World</p></div>";
+
+        // shtml += "<li data-collapsed='false' class='tweet'>";
         
-        shtml += this.generateName(tweet);
-        shtml += this.generateAvatar(tweet);
-        shtml += BREAK;
-        shtml += this.generateText(tweet);
-        shtml += this.generateDate(tweet);
-        shtml += this.generateImages(tweet);
-        shtml += this.generateLinks(tweet);
-        shtml += this.generateTags(tweet);
-        shtml += this.generateMentions(tweet);
+        // shtml += this.generateName(tweet);
+        // shtml += this.generateAvatar(tweet);
+        // shtml += BREAK;
+        // shtml += this.generateText(tweet);
+        // shtml += this.generateDate(tweet);
+        // shtml += this.generateImages(tweet);
+        // shtml += this.generateLinks(tweet);
+        // shtml += this.generateTags(tweet);
+        // shtml += this.generateMentions(tweet);
         
-        shtml += "</div>";
+        // shtml += "</li>";
         return shtml;
     },
 
@@ -36,10 +38,10 @@ var generate = {
         var account = tweet.user.account;
         
         shtml = "";
-        shtml += "<div class='name'>";
-        shtml += "<h3>Tweet by " + name;
-        shtml += " (<a href='" + account + "'>@" + screen_name + "</a>)</h3>";
-        shtml += "</div>"
+        //shtml += "<div class='name'>";
+        shtml += "<h4>Tweet by " + name;
+        shtml += " (<a href='" + account + "'>@" + screen_name + "</a>)</h4>";
+        //shtml += "</div>"
         return shtml;
     },
 
