@@ -13,7 +13,7 @@
     <script src="js/favorites.js"></script>
     <link rel="stylesheet" href="css/custom.css">
 </head>
-<body onload="favorites.loadFavorites('./favs.json', '#items')">
+<body onload="favorites.loadFavorites('./favs.json', '#tweets')">
     
     <div data-role="page">
         
@@ -23,8 +23,10 @@
    		</div>
         
         <!-- MAIN BODY -->
-        <div id="items" data-role="content" data-theme="b">
-            <!-- Dynamic items will be generated here -->
+        <div data-role="content" data-theme="b">
+            <div id="tweets">
+                <!-- Dynamically generated tweets go here -->
+            </div>
         </div>
 
         <!-- FOOTER -->

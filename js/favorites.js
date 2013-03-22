@@ -8,7 +8,8 @@ var favorites = {
     /**
      * Load a user's favorite tweets.
      * @param file A JSON filename to load favorites from.
-     * @param target A descriptor to populate with the loaded favorite tweets.
+     * @param target A descriptor of a listview to populate with the loaded 
+     *               favorite tweets.
      *
      * @returns A list of tweet JSON objects. The format of this object is 
      *          different from that of the Twitter API's returned objects.
@@ -46,7 +47,7 @@ var favorites = {
                 // see generate.js for generateHTML
                 var html = generate.generateHTML({ user: user, data: data });
                 $(target).append(html);
-                $(target).trigger("create");
+                $(target).children().collapsible();
             });
         });
     },

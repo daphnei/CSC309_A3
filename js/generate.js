@@ -13,8 +13,9 @@ var generate = {
      */
     generateHTML: function(tweet) {
         var shtml = "";
-
-        shtml += "<div data-role='collapsible' data-collapsed='false' class='tweet'>";
+        
+        shtml += "<div class='tweet' data-role='collapsible' data-collapsed='false'>";
+        //shtml += "<div class='tweet'>";
         
         shtml += this.generateName(tweet);
         shtml += this.generateAvatar(tweet);
@@ -36,10 +37,8 @@ var generate = {
         var account = tweet.user.account;
         
         shtml = "";
-        shtml += "<div class='name'>";
-        shtml += "<h3>Tweet by " + name;
+        shtml += "<h3 class='name'>Tweet by " + name;
         shtml += " (<a href='" + account + "'>@" + screen_name + "</a>)</h3>";
-        shtml += "</div>"
         return shtml;
     },
 
@@ -58,7 +57,6 @@ var generate = {
 
     generateText: function(tweet) {
         var text = tweet.data.text;
-        
         
         return "<p>" + text + "</p>";
     },
