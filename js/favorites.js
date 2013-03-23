@@ -47,7 +47,8 @@ var favorites = {
                 // see generate.js for generateHTML
                 var html = generate.generateHTML({ user: user, data: data });
                 $(target).append(html);
-                $(target).children().collapsible();
+                console.log("Adding html!");
+                $(target).listview("refresh");
             });
         });
     },

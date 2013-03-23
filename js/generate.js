@@ -14,7 +14,7 @@ var generate = {
     generateHTML: function(tweet) {
         var shtml = "";
         
-        shtml += "<div class='tweet' data-role='collapsible' data-collapsed='false'>";
+        shtml += "<li class='tweet'>";
         //shtml += "<div class='tweet'>";
         
         shtml += this.generateName(tweet);
@@ -27,7 +27,7 @@ var generate = {
         shtml += this.generateTags(tweet);
         shtml += this.generateMentions(tweet);
         
-        shtml += "</div>";
+        shtml += "</li>";
         return shtml;
     },
 
