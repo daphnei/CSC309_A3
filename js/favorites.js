@@ -1,5 +1,5 @@
 var USER_QUERY = "http://twitter.com/account/redirect_by_id?id=";
-var TAG_QUERY = "http://twitter.com/search?q=";
+var TAG_QUERY = "http://twitter.com/search?src=hash&q=%23";
 
 var favorites = {
     
