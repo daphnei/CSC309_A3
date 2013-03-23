@@ -30,7 +30,7 @@
 
 /*Make all tags and links appear in small gray like Twitter does*/
 .mention, .hashtag, .tweetlink {
-	color:rgb(200,200,200);
+	color:#0084b4;
 	text-decoration:none;
 }
 
