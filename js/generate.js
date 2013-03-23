@@ -54,12 +54,28 @@ var generate = {
     generateText: function(tweet) {
         var text = tweet.data.text;
         
+        // Save up an array of objects, with two fields:
+        //    text: the text of the desired insertion
+        //    index: the index at which you want to insert it
+        var insertions = [];
+        
         // Add in links to the hash tags within the tweet text
         var tags = tweet.data.hashtags;
         for (var i = 0; i < tags.length; i++) {
             // Use the tag indices to figure out where to insert the links
-            // TODO: this
+            insertions.push({
+                text: "<a href ='" + tags[i].link + "'>",
+                index: tags[i].indices[0]
+            });
+            
+            insertions.push({
+                text: "</a>",
+                index: tags[i].indices[1]
+            });
         }
+        
+        // Now that we've built up these arrays, use them to insert the tags at the proper location.
+        text = helper.insertMultiple(text, insertions);
         
         return "<p>" + text + "</p>";
     },
