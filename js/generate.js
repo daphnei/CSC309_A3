@@ -79,7 +79,7 @@ var generate = {
         $.each(tweet.data.mentions, function(index, mention) {
             // Same idea as the hashtags
             insertions.push({
-                text: "<a href ='" + mention.account + "' class='usertag' target='_blank'>",
+                text: "<a href ='" + mention.account + "' class='mention' target='_blank'>",
                 index: mention.indices[0]
             });
             

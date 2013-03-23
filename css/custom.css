@@ -22,9 +22,15 @@
 }
 
 /*Make all tags and links appear in small gray like Twitter does*/
-.usertag, .hashtag, .tweetlink {
+.usertag {
 	color:rgb(200,200,200);
 	font-size:80%;
+	text-decoration:none;
+}
+
+/*Make all tags and links appear in small gray like Twitter does*/
+.mention, .hashtag, .tweetlink {
+	color:rgb(200,200,200);
 	text-decoration:none;
 }
 
