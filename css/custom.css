@@ -17,6 +17,18 @@
 	float:none; 
 }
 
+/*Make all tags appear in small gray like Twitter does*/
+.usertag, .hashtag {
+	color:rgb(200,200,200);
+	font-size:80%;
+	text-decoration:none;
+}
+
+/* For formatting the date for each tweet*/
+.date {
+	color:rgb(200,200,200);
+}
+
 /* 1st breakpoint - Float B and C, leave A full width on top */ 
 @media all and (min-width: 34em){
 	.rwd-example div {
@@ -68,11 +80,4 @@
 	  float:left; 
 	  width: 24.925%; 
 	}
-}
-	
-/*Make all tags appear in small gray like Twitter does*/
-.usertag {
-	color:rgb(200,200,200);
-	font-size:80%;
-	text-decoration:none;
 }

@@ -59,7 +59,7 @@ var generate = {
     generateDate: function(tweet) {
         var tweetDate = new Date(tweet.data.date);
 		var dateText = tweetDate.getDate() + " " + MONTHS[tweetDate.getUTCMonth()] + ", " + tweetDate.getFullYear();
-        return "<p>Posted on " + dateText + "</p>";
+        return "<p class=date>Posted on " + dateText + "</p>";
     },
     
     generateImages: function(tweet) {
