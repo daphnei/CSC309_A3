@@ -63,18 +63,18 @@ var generate = {
         
         // Add in links to the hash tags within the tweet text
         var tags = tweet.data.hashtags;
-        for (var i = 0; i < tags.length; i++) {
+        $.each(tags, function(index, tag) {
             // Use the tag indices to figure out where to insert the links
             insertions.push({
-                text: "<a href ='" + tags[i].link + "' class='hashtag'>",
-                index: tags[i].indices[0]
+                text: "<a href ='" + tag.link + "' class='hashtag'>",
+                index: tag.indices[0]
             });
             
             insertions.push({
                 text: "</a>",
-                index: tags[i].indices[1]
+                index: tag.indices[1]
             });
-        }
+        });
         
         // Now that we've built up these arrays, use them to insert the tags at the proper location.
         text = helper.insertMultiple(text, insertions);

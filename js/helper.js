@@ -34,9 +34,9 @@ var helper = {
         // This ensures that we insert from the end of the string first, which prevents
         // us from having to adjust the indices as we insert things.
         
-        for (var i=0; i < insertions.length; i++) {
-            string = this.insert(string, insertions[i].text, insertions[i].index);
-        }
+        $.each(insertions, function(index, insertion) {
+            string = helper.insert(string, insertion.text, insertion.index);
+        });
         
         return string
     }
