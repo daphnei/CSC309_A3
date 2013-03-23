@@ -66,7 +66,7 @@ var generate = {
         $.each(tags, function(index, tag) {
             // Use the tag indices to figure out where to insert the links
             insertions.push({
-                text: "<a href ='" + tag.link + "' class='hashtag'>",
+                text: "<a href ='" + tag.link + "' class='hashtag' target='_blank'>",
                 index: tag.indices[0]
             });
             
@@ -81,7 +81,7 @@ var generate = {
         $.each(mentions, function(index, mention) {
             // Same idea as the hashtags
             insertions.push({
-                text: "<a href ='" + mention.account + "' class='usertag'>",
+                text: "<a href ='" + mention.account + "' class='usertag' target='_blank'>",
                 index: mention.indices[0]
             });
             
