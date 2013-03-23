@@ -14,7 +14,7 @@ var generate = {
     generateHTML: function(tweet) {
         var shtml = "";
         
-        shtml += "<li class='tweet' onClick='$(\"#details\").popup(\"open\");'>";
+        shtml += "<li class='tweet'>";
         shtml += "<table><tr>";
         
         shtml += "<td>" + this.generateAvatar(tweet) + "</td>";
