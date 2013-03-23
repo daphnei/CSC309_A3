@@ -14,7 +14,7 @@ var generate = {
     generateHTML: function(tweet) {
         var shtml = "";
         
-        shtml += "<li class='tweet'>";
+        shtml += "<li class='tweet'><a href='#details' data-rel='popup'>";
         shtml += "<table><tr>";
         
         shtml += "<td>" + this.generateAvatar(tweet) + "</td>";
@@ -28,7 +28,7 @@ var generate = {
         shtml += this.generateMentions(tweet);
         shtml += "</td>";
         
-        shtml += "</tr></table></li>";
+        shtml += "</tr></table></a></li>";
         return shtml;
     },
 

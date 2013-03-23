@@ -49,10 +49,6 @@ var favorites = {
                 $(target).append(html);
                 console.log("Adding html!");
                 $(target).listview("refresh");
-                
-                $(target).find(".tweet").on('click', function(event) {
-                    $("#details").popup("open");
-                });
             });
         });
     },
