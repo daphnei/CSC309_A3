@@ -62,8 +62,7 @@ var generate = {
         var insertions = [];
         
         // Add in links to the hash tags within the tweet text
-        var tags = tweet.data.hashtags;
-        $.each(tags, function(index, tag) {
+        $.each(tweet.data.hashtags, function(index, tag) {
             // Use the tag indices to figure out where to insert the links
             insertions.push({
                 text: "<a href ='" + tag.link + "' class='hashtag' target='_blank'>",
@@ -77,8 +76,7 @@ var generate = {
         });
         
         // Add in links to @mentions within the tweet text
-        var mentions = tweet.data.mentions;
-        $.each(mentions, function(index, mention) {
+        $.each(tweet.data.mentions, function(index, mention) {
             // Same idea as the hashtags
             insertions.push({
                 text: "<a href ='" + mention.account + "' class='usertag' target='_blank'>",
