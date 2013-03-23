@@ -1,5 +1,5 @@
 var BREAK = "<br>"
-
+var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "Novemeber", "December"];
 var generate = {
     
     /**
@@ -37,8 +37,8 @@ var generate = {
         var account = tweet.user.account;
         
         shtml = "";
-        shtml += "<h3 class='name'>Tweet by " + name;
-        shtml += " (<a href='" + account + "'>@" + screen_name + "</a>)</h3>";
+        shtml += "<h3 class='name'>" + name;
+        shtml += " <a href='" + account + "' class='usertag'>@" + screen_name + "</a></h3>";
         return shtml;
     },
 
@@ -47,22 +47,19 @@ var generate = {
         var avatar = tweet.user.image;
 
         shtml = "";
-        shtml += "<div class='avatar'>";
-        shtml += "<img href='" + account + "' src='" + avatar + "'/>";
-        shtml += "</div>";
+        shtml += "<img class='avatar' href='" + "www.google.com" + "' src='" + avatar + "'/>";
         return shtml;
     },
 
     generateText: function(tweet) {
         var text = tweet.data.text;
-        
         return "<p>" + text + "</p>";
     },
 
     generateDate: function(tweet) {
-        var date = tweet.data.date;
-
-        return "<p>Posted on " + date + ".</p>";
+        var tweetDate = new Date(tweet.data.date);
+		var dateText = tweetDate.getDate() + " " + MONTHS[tweetDate.getUTCMonth()] + ", " + tweetDate.getFullYear();
+        return "<p>Posted on " + dateText + "</p>";
     },
     
     generateImages: function(tweet) {
