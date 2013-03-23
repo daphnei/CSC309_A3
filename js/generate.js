@@ -15,19 +15,20 @@ var generate = {
         var shtml = "";
         
         shtml += "<li class='tweet'>";
-        //shtml += "<div class='tweet'>";
+        shtml += "<table><tr>";
         
-        shtml += this.generateAvatar(tweet);
+        shtml += "<td>" + this.generateAvatar(tweet) + "</td>";
+        shtml += "<td>";
         shtml += this.generateName(tweet);
-        shtml += BREAK;
         shtml += this.generateText(tweet);
         shtml += this.generateDate(tweet);
         shtml += this.generateImages(tweet);
         shtml += this.generateLinks(tweet);
         shtml += this.generateTags(tweet);
         shtml += this.generateMentions(tweet);
+        shtml += "</td>";
         
-        shtml += "</li>";
+        shtml += "</tr></table></li>";
         return shtml;
     },
 
@@ -46,8 +47,9 @@ var generate = {
         var account = tweet.user.account;
         var avatar = tweet.user.image;
 
-        shtml = "";
-        shtml += "<img class='avatar' href='" + "www.google.com" + "' src='" + avatar + "'/>";
+        shtml = "<a href='" + account + "'>";
+        shtml += "<img class='avatar' src='" + avatar + "'/>";
+        shtml += "</a>";
         return shtml;
     },
 
