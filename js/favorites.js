@@ -110,7 +110,8 @@ var favorites = {
                 return {
                    "name": mention.name,
                    "screen_name": mention.screen_name,
-                   "account": USER_QUERY + mention.id_str
+                   "account": USER_QUERY + mention.id_str,
+                   "indices": mention.indices
                 };
             });
         }

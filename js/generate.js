@@ -76,7 +76,22 @@ var generate = {
             });
         });
         
-        // Now that we've built up these arrays, use them to insert the tags at the proper location.
+        // Add in links to @mentions within the tweet text
+        var mentions = tweet.data.mentions;
+        $.each(mentions, function(index, mention) {
+            // Same idea as the hashtags
+            insertions.push({
+                text: "<a href ='" + mention.account + "' class='usertag'>",
+                index: mention.indices[0]
+            });
+            
+            insertions.push({
+                text: "</a>",
+                index: mention.indices[1]
+            });
+        });
+        
+        // Now that we've built up the array of insertions, use it to insert the links at the proper location.
         text = helper.insertMultiple(text, insertions);
         
         return "<p>" + text + "</p>";
