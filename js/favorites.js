@@ -130,7 +130,8 @@ var favorites = {
             return tags.map(function(tag) {
                 return {
                    "text": tag.text,
-                   "link": TAG_QUERY + tag.text
+                   "link": TAG_QUERY + tag.text,
+                   "indices": tag.indices
                 };
             });
         }

@@ -53,6 +53,14 @@ var generate = {
 
     generateText: function(tweet) {
         var text = tweet.data.text;
+        
+        // Add in links to the hash tags within the tweet text
+        var tags = tweet.data.hashtags;
+        for (int i = 0; i < tags.length; i++) {
+            // Use the tag indices to figure out where to insert the links
+            // TODO: this
+        }
+        
         return "<p>" + text + "</p>";
     },
 
