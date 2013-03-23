@@ -49,6 +49,13 @@ var favorites = {
                 $(target).append(html);
                 console.log("Adding html!");
                 $(target).listview("refresh");
+                
+                // Bind the function that will populate the details dialog with delicious content.
+                $(target).find(".tweet").on('click', function(event) {
+                    $("#details-header").html(generate.generateDetailsHeader(null)); // TODO: what to pass in?
+                    $("#details-content").html(generate.generateDetailsContent(null));
+                });
+                
             });
         });
     },
