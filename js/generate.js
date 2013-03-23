@@ -17,8 +17,8 @@ var generate = {
         shtml += "<li class='tweet'>";
         //shtml += "<div class='tweet'>";
         
-        shtml += this.generateName(tweet);
         shtml += this.generateAvatar(tweet);
+        shtml += this.generateName(tweet);
         shtml += BREAK;
         shtml += this.generateText(tweet);
         shtml += this.generateDate(tweet);
@@ -48,9 +48,7 @@ var generate = {
 
         shtml = "";
         shtml += "<div class='avatar'>";
-        shtml += "<a href='" + account + "'>";
-        shtml += "<img src='" + avatar + "'/>";
-        shtml += "</a>";
+        shtml += "<img href='" + account + "' src='" + avatar + "'/>";
         shtml += "</div>";
         return shtml;
     },
