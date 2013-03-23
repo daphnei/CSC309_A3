@@ -1,3 +1,7 @@
+/* I got rid of the prof's sample resizing CSS that should go here. We
+ * should look at this code and actually learn how it works, and add it
+ * back in again later*/
+
 /* Basic styles */
 .rwd-example div {
 	text-align:left;
@@ -29,55 +33,20 @@
 	color:rgb(200,200,200);
 }
 
-/* 1st breakpoint - Float B and C, leave A full width on top */ 
-@media all and (min-width: 34em){
-	.rwd-example div {
-	   min-height:12em;
-	}
-	.rwd-example .ui-block-b, 
-	.rwd-example .ui-block-c { 
-	  float:left; 
-	  width: 49.95%; 
-	}
-	.rwd-example .ui-block-b p, 
-	.rwd-example .ui-block-c p { 
-	  font-size:.8em;
+.li {
+	padding-left: 60px;
+}
 
+/* 1st breakpoint - Float B and C, leave A full width on top */ 
+@media all and (max-width: 34em){
+	/*Make the borders smaller than the default when on smaller screens*/
+	.ui-li .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li {
+		display: block;
+		padding: 0.1em 10px;
 	}
 }
 
 /* 2nd breakpoint - Float all, 50/25/25 */ 
 @media all and (min-width: 46em){
 
-	.rwd-example div {
-	   min-height:17em;
-	}
-	.rwd-example .ui-block-a, 
-	.rwd-example .ui-block-c { 
-	  float:left; 
-	  width: 49.95%; 
-	}
-	.rwd-example .ui-block-b, 
-	.rwd-example .ui-block-c { 
-	  float:left; 
-	  width: 24.925%; 
-	}
-}
-
-/* 3rd breakpoint - Bump up font size at very wide screens */ 
-@media all and (min-width: 66em){
-
-	.rwd-example {
-	  font-size:125%;
-	}
-	.rwd-example .ui-block-a, 
-	.rwd-example .ui-block-c { 
-	  float:left; 
-	  width: 49.95%; 
-	}
-	.rwd-example .ui-block-b, 
-	.rwd-example .ui-block-c { 
-	  float:left; 
-	  width: 24.925%; 
-	}
 }
