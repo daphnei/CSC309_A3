@@ -89,6 +89,20 @@ var generate = {
             });
         });
         
+        // Add in links to urls mentioned within the tweet text
+        $.each(tweet.data.links, function(index, link) {
+            // Same idea as the hashtags
+            insertions.push({
+                text: "<a href ='" + link.url + "' class='tweetlink' target='_blank'>",
+                index: link.indices[0]
+            });
+            
+            insertions.push({
+                text: "</a>",
+                index: link.indices[1]
+            });
+        });
+        
         // Now that we've built up the array of insertions, use it to insert the links at the proper location.
         text = helper.insertMultiple(text, insertions);
         

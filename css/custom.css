@@ -21,8 +21,8 @@
 	float:none; 
 }
 
-/*Make all tags appear in small gray like Twitter does*/
-.usertag, .hashtag {
+/*Make all tags and links appear in small gray like Twitter does*/
+.usertag, .hashtag, .tweetlink {
 	color:rgb(200,200,200);
 	font-size:80%;
 	text-decoration:none;

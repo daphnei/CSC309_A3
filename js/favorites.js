@@ -66,7 +66,10 @@ var favorites = {
         var urls = tweet.entities.urls;
         if (urls !== undefined) {
             return urls.map(function(url) {
-                return url.url;
+                return {
+                    "url": url.url,
+                    "indices": url.indices
+                };
             });
         }
         
