@@ -56,7 +56,7 @@ var generate = {
         
         // Add in links to the hash tags within the tweet text
         var tags = tweet.data.hashtags;
-        for (int i = 0; i < tags.length; i++) {
+        for (var i = 0; i < tags.length; i++) {
             // Use the tag indices to figure out where to insert the links
             // TODO: this
         }
