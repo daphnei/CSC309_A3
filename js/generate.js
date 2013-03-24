@@ -48,7 +48,7 @@ var generate = {
         var avatar = tweet.user.image;
 
         shtml = "<a href='" + account + "'>";
-        shtml += "<img class='avatar' src='" + avatar + "'/>";
+        shtml += "<img class='avatar' width='48px' src='" + avatar + "'/>";
         shtml += "</a>";
         return shtml;
     },
