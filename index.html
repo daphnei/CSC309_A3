@@ -59,10 +59,13 @@
 </html>
 
 <script>
+	window.onload=function(){
+        favorites.loadFavorites('scripts/myfaves.json', '#items');
+    }
+    
     $(window).scroll(function() {
-		if($(window).scrollTop() + $(window).height() == $(document).height()) {
-			console.log("Bottom");
-			favorites.loadFavorites('scripts/myfaves.json', '#items');
+		if($(window).scrollTop() + $(window).height() >= $(document).height() - 200) {
+			favorites.renderFavorites('#items');
 		}
 	});
 </script>
