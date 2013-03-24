@@ -129,5 +129,23 @@ var generate = {
     
     generateMentions: function(tweet) {
         return "";
+    },
+    
+    /**
+     * Generates HTML for the header of the details dialog.
+     * 
+     * @param tweet The tweet that you're getting the details for (?).
+     */
+    generateDetailsHeader: function(tweet) {
+        return "HAHA!"
+    },
+    
+    /**
+     * Generates HTML for the content of the details dialog.
+     * 
+     * @param tweet The tweet that you're getting the details for (?).
+     */
+    generateDetailsContent: function(tweet) {
+        return "LOL!"
     }
 }
