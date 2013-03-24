@@ -43,6 +43,11 @@
 	padding-left: 60px;
 }
 
+.ui-li-desc {
+    text-overflow: ellipsis;
+    overflow: visible;
+    white-space: normal;
+}
 /* 1st breakpoint - Float B and C, leave A full width on top */ 
 @media all and (max-width: 34em){
 	/*Make the borders smaller than the default when on smaller screens*/
