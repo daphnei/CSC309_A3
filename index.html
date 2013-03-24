@@ -51,13 +51,16 @@
             <a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right ">Close</a>
         </div>
 	</div>
-	
+	<div id="page_end"></div>
 </body>
 </html>
 
 <script>
-    window.onload=function(){
-        favorites.loadFavorites('favs.json', '#items');
-    }
+    $(window).scroll(function() {
+		if($(window).scrollTop() + $(window).height() == $(document).height()) {
+			console.log("Bottom");
+			favorites.loadFavorites('scripts/myfaves.json', '#items');
+		}
+	});
 </script>
 

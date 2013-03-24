@@ -47,7 +47,6 @@ var favorites = {
                 // see generate.js for generateHTML
                 var html = generate.generateHTML({ user: user, data: data });
                 $(target).append(html);
-                console.log("Adding html!");
                 $(target).listview("refresh");
             });
         });
