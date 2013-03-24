@@ -4,6 +4,7 @@ var TAG_QUERY = "http://twitter.com/search?src=hash&q=%23";
 var favorites = {
     
     /* PUBLIC */
+    tweets: new Array(),
 
     /**
      * Load a user's favorite tweets.
@@ -44,10 +45,28 @@ var favorites = {
                     hashtags: favorites.extractTags(tweet)
                 };
                 
-                // see generate.js for generateHTML
-                var html = generate.generateHTML({ user: user, data: data });
+                // package the tweet, add html for it and refresh
+                var tweet = { user: user, data: data };
+                favorites.tweets.push(tweet);
+                var html = generate.generateHTML(tweet);
                 $(target).append(html);
                 $(target).listview("refresh");
+                
+                // Bind the function that will populate the details dialog with delicious content.
+                $(target).find(".tweet").click(function(event) {
+
+                    // find the tweet this click landed on using the id
+                    var id = $(this).attr("id");
+                    var tweet = favorites.tweets[id];
+
+                    if (tweet !== undefined) {
+                        $("#details-header").html(generate.generateDetailsHeader(tweet)); 
+                        $("#details-content").html(generate.generateDetailsContent(tweet));
+                    } else {
+                        console.log("Could not find tweet with id: " + id);
+                    }
+                });
+                
             });
         });
     },

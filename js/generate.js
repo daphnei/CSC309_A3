@@ -12,11 +12,19 @@ var generate = {
      * @returns A string of HTML generated from the given tweet.
      */
     generateHTML: function(tweet) {
-        var shtml = "";
         
-        shtml += "<li class='tweet'><a href='#details' data-rel='popup'>";
+        // id for the tweet corresponds to its index in the favorite
+        // tweets list
+        var index = favorites.tweets.length-1;
+        var id = index;
+        
+        // setup the tags enclosing the tweet content
+        var shtml = "";
+        shtml += "<li class='tweet' id='" + id + "'>";
+        shtml += "<a href='#details' data-rel='popup'>";
         shtml += "<table><tr>";
         
+        // generate and add in all the tweet content
         shtml += "<td>" + this.generateAvatar(tweet) + "</td>";
         shtml += "<td>";
         shtml += this.generateName(tweet);
@@ -28,6 +36,7 @@ var generate = {
         shtml += this.generateMentions(tweet);
         shtml += "</td>";
         
+        // close the tags enclosing content
         shtml += "</tr></table></a></li>";
         return shtml;
     },
@@ -129,5 +138,23 @@ var generate = {
     
     generateMentions: function(tweet) {
         return "";
+    },
+    
+    /**
+     * Generates HTML for the header of the details dialog.
+     * 
+     * @param tweet The tweet that you're getting the details for (?).
+     */
+    generateDetailsHeader: function(tweet) {
+        return "<h4>" + tweet.user.name + " tweets: </h4>";
+    },
+    
+    /**
+     * Generates HTML for the content of the details dialog.
+     * 
+     * @param tweet The tweet that you're getting the details for (?).
+     */
+    generateDetailsContent: function(tweet) {
+        return "<p>" + tweet.data.text + "</p>";
     }
 }
