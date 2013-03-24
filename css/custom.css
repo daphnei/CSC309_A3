@@ -8,7 +8,8 @@
 	border-color:#ddd;
 	margin-bottom:1em;
 }
-  .rwd-example p {
+
+.rwd-example p {
 	color:#777;
 	line-height:140%
 }
@@ -48,16 +49,23 @@
     overflow: visible;
     white-space: normal;
 }
+
 /* 1st breakpoint - Float B and C, leave A full width on top */ 
-@media all and (max-width: 34em){
+@media all and (max-width: 34em) {
+
 	/*Make the borders smaller than the default when on smaller screens*/
 	.ui-li .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li {
 		display: block;
-		padding: 0.1em 10px;
+		padding: 0.1em 5px;
 	}
+
+    /* Top-align the avatars */
+    td {
+        vertical-align: top;
+    }
 }
 
 /* 2nd breakpoint - Float all, 50/25/25 */ 
-@media all and (min-width: 46em){
+@media all and (min-width: 46em) {
 
 }
