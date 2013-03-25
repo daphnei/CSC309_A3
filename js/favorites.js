@@ -48,7 +48,7 @@ var favorites = {
                 // package the tweet, add html for it and refresh
                 var tweet = { user: user, data: data };
                 favorites.tweets.push(tweet);
-                var html = generate.generateHTML(tweet);
+                var html = generateListView.generateHTML(tweet);
                 $(target).append(html);
                 $(target).listview("refresh");
                 

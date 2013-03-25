@@ -1,6 +1,11 @@
 var BREAK = "<br>"
 var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "Novemeber", "December"];
-var generate = {
+
+/**
+ * generateListView.js
+ * Generate html for a tweet in the main list view.
+ */
+var generateListView = {
     
     /**
      * Generate HTML from a tweet.
@@ -155,6 +160,7 @@ var generate = {
      * @param tweet The tweet that you're getting the details for (?).
      */
     generateDetailsContent: function(tweet) {
-        return "<p>" + tweet.data.text + "</p>";
+
+        "<p>" + tweet.data.text + "</p>";
     }
 }
