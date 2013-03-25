@@ -5,6 +5,12 @@ var favorites = {
     
     /* PUBLIC */
     tweets: new Array(),
+	
+	tweetIndex: 0, //Our current index in tweets. all tweets previous to this
+					//index have already been rendered on to the page.
+	
+	TWEETS_PER_SCROLL: 6, //A constant indicating the number of tweets to RENDER
+						   //each time the user gets to the bottom of the page
 
     /**
      * Load a user's favorite tweets.
@@ -48,29 +54,48 @@ var favorites = {
                 // package the tweet, add html for it and refresh
                 var tweet = { user: user, data: data };
                 favorites.tweets.push(tweet);
-                var html = generateListView.generateHTML(tweet);
-                $(target).append(html);
-                $(target).listview("refresh");
-                
-                // Bind the function that will populate the details dialog with delicious content.
-                $(target).find(".tweet").click(function(event) {
-
-                    // find the tweet this click landed on using the id
-                    var id = $(this).attr("id");
-                    var tweet = favorites.tweets[id];
-
-                    if (tweet !== undefined) {
-                        $("#details-header").html(generate.generateDetailsHeader(tweet)); 
-                        $("#details-content").html(generate.generateDetailsContent(tweet));
-                    } else {
-                        console.log("Could not find tweet with id: " + id);
-                    }
-                });
-                
             });
+                            
+			//render the first batch of tweets
+			favorites.renderFavorites(target);
         });
     },
 
+
+	renderFavorites: function(target) {
+		console.log("In render favorites");
+		var i = favorites.tweetIndex;
+		
+		//iterate through the next batch of tweets to be rendered, but stop
+		//if we get to the end of the tweet list.
+		while((i < favorites.tweetIndex + favorites.TWEETS_PER_SCROLL)
+				&& (i < favorites.tweets.length)) {
+					
+			var tweet = favorites.tweets[i];
+		
+			var html = generate.generateHTML(tweet);
+			$(target).append(html);
+			$(target).listview("refresh");
+			
+			// Bind the function that will populate the details dialog with delicious content.
+			$(target).find(".tweet").click(function(event) {
+
+				// find the tweet this click landed on using the id
+				var id = $(this).attr("id");
+				var tweet = favorites.tweets[id];
+
+				if (tweet !== undefined) {
+					$("#details-header").html(generate.generateDetailsHeader(tweet)); 
+					$("#details-content").html(generate.generateDetailsContent(tweet));
+				} else {
+					console.log("Could not find tweet with id: " + id);
+				}
+			});
+			
+			i++;
+		}
+		favorites.tweetIndex += favorites.TWEETS_PER_SCROLL;
+	},
     /* "PRIVATE" */
 
     /**
