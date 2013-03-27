@@ -68,12 +68,12 @@ var favorites = {
 		
 		//iterate through the next batch of tweets to be rendered, but stop
 		//if we get to the end of the tweet list.
-		while((i < favorites.tweetIndex + favorites.TWEETS_PER_SCROLL)
+		while ((i < favorites.tweetIndex + favorites.TWEETS_PER_SCROLL)
 				&& (i < favorites.tweets.length)) {
 					
 			var tweet = favorites.tweets[i];
 		
-			var html = generate.generateHTML(tweet);
+			var html = generateListView.generateHTML(tweet, i);
 			$(target).append(html);
 			$(target).listview("refresh");
 			
@@ -83,10 +83,11 @@ var favorites = {
 				// find the tweet this click landed on using the id
 				var id = $(this).attr("id");
 				var tweet = favorites.tweets[id];
-
+                console.log("ID reported as: " + id);
 				if (tweet !== undefined) {
-					$("#details-header").html(generate.generateDetailsHeader(tweet)); 
-					$("#details-content").html(generate.generateDetailsContent(tweet));
+                    console.log(generateDetailsView.generateDetailsContent(tweet));
+					$("#details-header").html(generateDetailsView.generateDetailsHeader(tweet)); 
+					$("#details-content").html(generateDetailsView.generateDetailsContent(tweet));
 				} else {
 					console.log("Could not find tweet with id: " + id);
 				}
@@ -185,4 +186,4 @@ var favorites = {
         
         return new Array();
     }
-}
+};

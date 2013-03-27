@@ -38,6 +38,6 @@ var helper = {
             string = helper.insert(string, insertion.text, insertion.index);
         });
         
-        return string
+        return string;
     }
-}
+};

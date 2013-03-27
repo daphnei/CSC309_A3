@@ -15,7 +15,8 @@
 	
 	<!-- User Scripts -->
 	<script src="js/helper.js"></script>
-	<script src="js/generate.js"></script>
+	<script src="js/generateListView.js"></script>
+	<script src="js/generateDetailsView.js"></script>
 	<script src="js/favorites.js"></script>
     <script src="js/resize.js"></script>
 </head>
@@ -63,10 +64,10 @@
         favorites.loadFavorites('scripts/myfaves.json', '#items');
     }
     
-    $(window).scroll(function() {
+    setInterval(function() {
 		if($(window).scrollTop() + $(window).height() >= $(document).height() - 200) {
 			favorites.renderFavorites('#items');
 		}
-	});
+	}, 500);
 </script>
 

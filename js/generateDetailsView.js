@@ -2,7 +2,8 @@
  * generateDetailsView.js
  * Generation for the more detailed view of an individual tweet.
  */
-var generateDetailsView {
+var generateDetailsView = {
+
     /**
      * Generates HTML for the header of the details dialog.
      * 
@@ -18,7 +19,6 @@ var generateDetailsView {
      * @param tweet The tweet that you're getting the details for (?).
      */
     generateDetailsContent: function(tweet) {
-
-        "<p>" + tweet.data.text + "</p>";
+        return "<p>" + tweet.data.text + "</p>";
     }
-}
+};

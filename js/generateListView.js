@@ -13,14 +13,16 @@ var generateListView = {
      *               Note that loadFavorites follows a different, more concise
      *               format for storing data, so don't consult the Twitter API 
      *               when accessing data from it.
+     * @param index The index of the tweet. By default, equal to the number of
+     *              tweets currently stored so far.
      *
      * @returns A string of HTML generated from the given tweet.
      */
-    generateHTML: function(tweet) {
+    generateHTML: function(tweet, index) {
         
         // id for the tweet corresponds to its index in the favorite
         // tweets list
-        var index = favorites.tweets.length-1;
+        var index = (index !== undefined ? index : favorites.tweets.length-1);
         var id = index;
         
         // setup the tags enclosing the tweet content
@@ -144,23 +146,4 @@ var generateListView = {
     generateMentions: function(tweet) {
         return "";
     },
-    
-    /**
-     * Generates HTML for the header of the details dialog.
-     * 
-     * @param tweet The tweet that you're getting the details for (?).
-     */
-    generateDetailsHeader: function(tweet) {
-        return "<h4>" + tweet.user.name + " tweets: </h4>";
-    },
-    
-    /**
-     * Generates HTML for the content of the details dialog.
-     * 
-     * @param tweet The tweet that you're getting the details for (?).
-     */
-    generateDetailsContent: function(tweet) {
-
-        "<p>" + tweet.data.text + "</p>";
-    }
-}
+};
