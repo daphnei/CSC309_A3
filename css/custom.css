@@ -44,10 +44,18 @@
 	padding-left: 60px;
 }
 
+/* Don't let text overflow in the tweets. */
 .ui-li-desc {
     text-overflow: ellipsis;
     overflow: visible;
     white-space: normal;
+}
+
+/* Format the notification that no more tweets remain. */
+.end-notification p {
+    text-align: center;
+    vertical-align: top;
+    font-size: 75%; 
 }
 
 /* 1st breakpoint - Float B and C, leave A full width on top */ 
