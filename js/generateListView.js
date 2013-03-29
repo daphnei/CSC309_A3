@@ -123,6 +123,20 @@ var generateListView = {
             });
         });
         
+        // Add in links to media urls mentioned within the tweet text
+        $.each(tweet.data.media, function(index, medium) {
+            // Same idea as the hashtags
+            insertions.push({
+                text: "<a href ='" + medium.url + "' class='tweetlink' target='_blank'>",
+                index: medium.indices[0]
+            });
+            
+            insertions.push({
+                text: "</a>",
+                index: medium.indices[1]
+            });
+        });
+        
         // Now that we've built up the array of insertions, use it to insert the links at the proper location.
         text = helper.insertMultiple(text, insertions);
         
