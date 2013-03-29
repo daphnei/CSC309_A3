@@ -21,7 +21,6 @@ var generateDetailsView = {
      * @param tweet The tweet that you're getting the details for (?).
      */
     generateDetailsContent: function(tweet) {
-        console.log(tweet)
         var shtml = "";
         shtml += "<div class='ui-block-a'>";
         shtml += "<img src='" + tweet.user.image + "'/>";
