@@ -34,10 +34,11 @@ var favorites = {
                 user = {
                     name: tweet.user.name,
                     screen_name: tweet.user.screen_name,
-                    location: tweet.user.location,
+                    location: tweet.user.location.length > 0? tweet.user.location : null,
                     description: tweet.user.description,
-                    url: tweet.user.url,
+                    website: tweet.user.url,
                     account: "http://twitter.com/" + tweet.user.screen_name,
+                    background: tweet.user.profile_background_image_url, 
                     image: tweet.user.profile_image_url
                 };
                 
@@ -78,7 +79,7 @@ var favorites = {
 			$(target).listview("refresh");
 			$("a[data-role='button']").button();
 			// Bind the function that will populate the details dialog with delicious content.
-			/*$(target).find(".tweet").click(function(event) {
+			$(target).find(".tweet").click(function(event) {
 
 				// find the tweet this click landed on using the id
 				var id = $(this).attr("id");
@@ -86,12 +87,12 @@ var favorites = {
                 console.log("ID reported as: " + id);
 				if (tweet !== undefined) {
                     console.log(generateDetailsView.generateDetailsContent(tweet));
-					$("#details-header").html(generateDetailsView.generateDetailsHeader(tweet)); 
+					//$("#details-header").html(generateDetailsView.generateDetailsHeader(tweet)); 
 					$("#details-content").html(generateDetailsView.generateDetailsContent(tweet));
 				} else {
 					console.log("Could not find tweet with id: " + id);
 				}
-			});*/
+			});
 			
 			i++;
 		}
@@ -101,6 +102,7 @@ var favorites = {
 	unrenderedTweets: function() {
 		return favorites.tweetIndex < favorites.tweets.length; 	
 	},
+
     /* "PRIVATE" */
 
     /**

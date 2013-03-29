@@ -28,6 +28,7 @@ var generateListView = {
         // setup the tags enclosing the tweet content
         var shtml = "";
         shtml += "<li class='tweet' id='" + id + "'>";
+        shtml += "<a href='#details' data-rel='popup'>";
         shtml += "<table><tr>";
         
         // generate and add in all the tweet content
@@ -43,7 +44,7 @@ var generateListView = {
         shtml += "</td>";
         
         // close the tags enclosing content
-        shtml += "</tr></table></li>";
+        shtml += "</tr></table></a></li>";
         return shtml;
     },
 
@@ -52,7 +53,7 @@ var generateListView = {
         var screen_name = tweet.user.screen_name;
         var account = tweet.user.account;
         
-        shtml = "";
+        var shtml = "";
         shtml += "<h3 class='name'>" + name;
         shtml += " <a href='" + account + "' class='usertag'>@" + screen_name + "</a></h3>";
         return shtml;
@@ -62,9 +63,9 @@ var generateListView = {
         var account = tweet.user.account;
         var avatar = tweet.user.image;
 
-        shtml = "<a href='" + account + "'>";
-        shtml += "<img class='avatar' width='48px' src='" + avatar + "'/>";
-        shtml += "</a>";
+        //shtml = "<a href='" + account + "'>";
+        var shtml = "<img class='avatar' width='48px' src='" + avatar + "'/>";
+        //shtml += "</a>";
         return shtml;
     },
 
@@ -137,7 +138,10 @@ var generateListView = {
     
     generateImages: function(tweet) {
         if (tweet.data.photos.length > 0)  {
-            var imageTag = '<img src=' + tweet.data.photos[0] + '/>';
+            var imageTag = "";
+            for (var i = 0; i < tweet.data.photos.length; i++) {
+                imageTag += ('<img src=' + tweet.data.photos[i] + '/>');
+            }
             $("#images").html(imageTag);
             return "<a href='#popupPhoto' data-rel='popup' data-icon='star' data-iconpos='notext'" +
                     "data-role='button' data-mini='true' data-inline='true'>View Photo</a>";
