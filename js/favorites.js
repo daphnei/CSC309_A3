@@ -172,7 +172,7 @@ var favorites = {
          }
          
          return new Array();
-     }
+     },
      
 
     /**
