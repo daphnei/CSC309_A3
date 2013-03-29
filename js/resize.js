@@ -19,9 +19,9 @@ var resize = {
     hideArrowIfMobile: function(width) {
         if (width < MOBILE_WIDTH) {
             console.log("HIDING AN ICON")
-            $("li").attr("data-icon", "false");
+            $("li").removeClass("ui-btn-icon-right");
         } else {
-            $("li").attr("data-icon", "true");
+            $("li").addClass("ui-btn-icon-right");
         }
     }
 };
