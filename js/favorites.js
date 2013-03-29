@@ -47,6 +47,7 @@ var favorites = {
                     date: tweet.created_at,
                     links: favorites.extractLinks(tweet),
                     photos: favorites.extractPhotos(tweet),
+                    media: favorites.extractMedia(tweet),
                     mentions: favorites.extractMentions(tweet),
                     hashtags: favorites.extractTags(tweet)
                 };
@@ -145,6 +146,32 @@ var favorites = {
 
         return new Array();
     },
+    
+    
+    /**
+     * Extract all media from a tweet object.
+     * Note: This does partly duplicate the functionality of extractPhotos,
+     * but it's necessary because twitter treats "photos" and "URLs"
+     * separately, despite the fact that pictures are represented as URLs.
+     *
+     * @param tweet The tweet object you want to extract the media for.
+     * 
+     * @returns A list of media objects.
+     */
+     extractMedia: function(tweet) {
+         var media = tweet.entities.media;
+         if (media !== undefined) {
+             return media.map(function(medium) {
+                 return {
+                     "url": medium.url,
+                     "indices": medium.indices
+                 };
+             });
+         }
+         
+         return new Array();
+     }
+     
 
     /**
      * Extract all the mentions from a tweet.
