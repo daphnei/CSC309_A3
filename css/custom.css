@@ -50,9 +50,20 @@
     white-space: normal;
 }
 
-/* 1st breakpoint - Float B and C, leave A full width on top */ 
+/* 1st breakpoint - For small phones */ 
 @media all and (max-width: 34em) {
+	.breakpoint.ui-grid-b .ui-block-a,
+	.breakpoint.ui-grid-b .ui-block-b,
+	.breakpoint.ui-grid-b .ui-block-c{
+		width: 100%; 
+		float:none; 
+	}
 
+	.ui-block-c p {
+		word-wrap: break-word;
+	    overflow: visible;
+	    white-space: normal;
+	}
 	/*Make the borders smaller than the default when on smaller screens*/
 	.ui-li .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li {
 		display: block;
@@ -65,7 +76,11 @@
     }
 }
 
-/* 2nd breakpoint - Float all, 50/25/25 */ 
-@media all and (min-width: 46em) {
 
+/* 2nd breakpoint - Float all, 50/25/25 */ 
+@media all {
+	.breakpoint.ui-grid-b .ui-block-a { width: 60px; }
+	.breakpoint.ui-grid-b .ui-block-b { width: 100px; }
+	.breakpoint.ui-grid-b .ui-block-c { width: 400px; }
+	.breakpoint.ui-grid-b .ui-block-a { clear: left; }
 }
