@@ -22,7 +22,7 @@ var favorites = {
      *          different from that of the Twitter API's returned objects.
      */
     loadFavorites: function(file, target) {
-        $.getJSON(file, function(data) {
+		$.getJSON(file, function(data) {
 
             // go through each tweet in the file, extract the info we need, and
             // append it to the target's html.
@@ -55,7 +55,7 @@ var favorites = {
                 // package the tweet, add html for it and refresh
                 var tweet = { user: user, data: data };
                 favorites.tweets.push(tweet);
-            });
+			});
                             
 			//render the first batch of tweets
 			favorites.renderFavorites(target);
@@ -64,7 +64,6 @@ var favorites = {
 
 
 	renderFavorites: function(target) {
-		console.log("In render favorites");
 		var i = favorites.tweetIndex;
 		
 		//iterate through the next batch of tweets to be rendered, but stop
@@ -97,6 +96,10 @@ var favorites = {
 			i++;
 		}
 		favorites.tweetIndex += favorites.TWEETS_PER_SCROLL;
+	},
+
+	unrenderedTweets: function() {
+		return favorites.tweetIndex < favorites.tweets.length; 	
 	},
 
     /* "PRIVATE" */

@@ -35,11 +35,15 @@
         </div>
 
         <!-- FOOTER -->
+		<div class="end-notification">
+			<!-- Notification that user has reached end of tweets -->
+		</div>
         <div class="jqm-footer">
             <p class="jqm-version"></p>
             <p>Made for CSC309 Winter 2013.</p>
         </div>
         
+		<!-- POPUPS -->
         <!-- TWEETER DETAILS POPUP -->
         <div data-role="popup" data-theme="b" data-overlay-theme="a" id="details" class="ui-corner-all" data-transition="pop"  data-position-to="window">
         	<div data-role="content" class="ui-content">
@@ -51,8 +55,13 @@
             <a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right ">Close</a>
         </div>
 
+<<<<<<< HEAD
         <!-- Image popup -->
         <div data-role="popup" data-corners="false". data-transition="pop" id="popupPhoto" data-position-to="window" data-overlay-theme="a">
+=======
+        <!-- IMAGE POPUP -->
+        <div data-role="popup" data-transition="pop" id="popupPhoto" data-position-to="window" data-overlay-theme="a">
+>>>>>>> fd428d99a67219457d02bd1f955befc9d3913a08
             <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
             <div id="images">
                 <!-- Images will be loaded here-->
@@ -70,9 +79,14 @@
     
     setInterval(function() {
 		if($(window).scrollTop() + $(window).height() >= $(document).height() - 200) {
-			favorites.renderFavorites('#items');
+			if (favorites.unrenderedTweets()) {
+				favorites.renderFavorites('#items');
+				$(".end-notification").html("");
+			} else {
+				$(".end-notification").html("<p>No more tweets :(</p>");
+			}
 		}
-	}, 500);
+	}, 200);
 
     //This does not work. Why?
     $("#index").on( "pageinit", function() {
