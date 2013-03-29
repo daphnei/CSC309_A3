@@ -21,6 +21,6 @@ var generateDetailsView = {
      */
     generateDetailsContent: function(tweet) {
         console.log(tweet)
-        return "<p>" + tweet.data.text + "</p>";
+        return "<p>" + tweet.data.photos + "</p>";
     }
 };

@@ -76,9 +76,9 @@ var favorites = {
 			var html = generateListView.generateHTML(tweet, i);
 			$(target).append(html);
 			$(target).listview("refresh");
-			
+			$("a[data-role='button']").button();
 			// Bind the function that will populate the details dialog with delicious content.
-			$(target).find(".tweet").click(function(event) {
+			/*$(target).find(".tweet").click(function(event) {
 
 				// find the tweet this click landed on using the id
 				var id = $(this).attr("id");
@@ -91,7 +91,7 @@ var favorites = {
 				} else {
 					console.log("Could not find tweet with id: " + id);
 				}
-			});
+			});*/
 			
 			i++;
 		}

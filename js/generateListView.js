@@ -28,7 +28,6 @@ var generateListView = {
         // setup the tags enclosing the tweet content
         var shtml = "";
         shtml += "<li class='tweet' id='" + id + "'>";
-        shtml += "<a href='#details' data-rel='popup'>";
         shtml += "<table><tr>";
         
         // generate and add in all the tweet content
@@ -36,15 +35,15 @@ var generateListView = {
         shtml += "<td>";
         shtml += this.generateName(tweet);
         shtml += this.generateText(tweet);
-        shtml += this.generateDate(tweet);
-        shtml += this.generateImages(tweet);
+        shtml += this.generateDateAndImageButton(tweet);
+        //shtml += this.generateImages(tweet);
         shtml += this.generateLinks(tweet);
         shtml += this.generateTags(tweet);
         shtml += this.generateMentions(tweet);
         shtml += "</td>";
         
         // close the tags enclosing content
-        shtml += "</tr></table></a></li>";
+        shtml += "</tr></table></li>";
         return shtml;
     },
 
@@ -129,14 +128,22 @@ var generateListView = {
         return "<p>" + text + "</p>";
     },
 
-    generateDate: function(tweet) {
+    generateDateAndImageButton: function(tweet) {
         var tweetDate = new Date(tweet.data.date);
 		var dateText = tweetDate.getDate() + " " + MONTHS[tweetDate.getUTCMonth()] + ", " + tweetDate.getFullYear();
-        return "<p class=date>Posted on " + dateText + "</p>";
+        return "<p class=date>Posted on " + dateText +
+                generateListView.generateImages(tweet) + "</p>";
     },
     
     generateImages: function(tweet) {
-        return "";
+        if (tweet.data.photos.length > 0)  {
+            var imageTag = '<img src=' + tweet.data.photos[0] + '/>';
+            $("#images").html(imageTag);
+            return "<a href='#popupPhoto' data-rel='popup' data-icon='star' data-iconpos='notext'" +
+                    "data-role='button' data-mini='true' data-inline='true'>View Photo</a>";
+        } else {
+            return "";
+        }
     },
     
     generateLinks: function(tweet) {
