@@ -69,6 +69,10 @@ var generateListView = {
         return shtml;
     },
 
+    /*
+    Retrieves the text of the Tweet from the JSON and formats it with correct
+    hyperlinks and hashtags.
+    */
     generateText: function(tweet) {
         var text = tweet.data.text;
         

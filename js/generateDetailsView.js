@@ -10,7 +10,8 @@ var generateDetailsView = {
      * @param tweet The tweet that you're getting the details for (?).
      */
     generateDetailsHeader: function(tweet) {
-        return "<h4>" + tweet.user.name + " tweets: </h4>";
+        return generateListView.generateText(tweet);
+        //return "<h4>" + tweet.user.name + " tweets: </h4>";
     },
     
     /**
@@ -19,6 +20,7 @@ var generateDetailsView = {
      * @param tweet The tweet that you're getting the details for (?).
      */
     generateDetailsContent: function(tweet) {
+        console.log(tweet)
         return "<p>" + tweet.data.text + "</p>";
     }
 };
