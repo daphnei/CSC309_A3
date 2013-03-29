@@ -96,6 +96,10 @@ var favorites = {
 		}
 		favorites.tweetIndex += favorites.TWEETS_PER_SCROLL;
 	},
+
+	unrenderedTweets: function() {
+		return favorites.tweetIndex < favorites.tweets.length; 	
+	},
     /* "PRIVATE" */
 
     /**

@@ -35,6 +35,9 @@
         </div>
 
         <!-- FOOTER -->
+		<div class="end-notification">
+			<!-- Notification that user has reached end of tweets -->
+		</div>
         <div class="jqm-footer">
             <p class="jqm-version"></p>
             <p>Made for CSC309 Winter 2013.</p>
@@ -75,7 +78,12 @@
     
     setInterval(function() {
 		if($(window).scrollTop() + $(window).height() >= $(document).height() - 200) {
-			favorites.renderFavorites('#items');
+			if (favorites.unrenderedTweets()) {
+				favorites.renderFavorites('#items');
+				$(".end-notification").html("");
+			} else {
+				$(".end-notification").html("<p>No more tweets :(</p>");
+			}
 		}
 	}, 200);
 
