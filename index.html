@@ -35,9 +35,6 @@
         </div>
 
         <!-- FOOTER -->
-		<div class="load-notification">
-			<!-- Notification that tweets are being loaded will be displayed here. -->
-		</div>
         <div class="jqm-footer">
             <p class="jqm-version"></p>
             <p>Made for CSC309 Winter 2013.</p>
@@ -80,7 +77,7 @@
 		if($(window).scrollTop() + $(window).height() >= $(document).height() - 200) {
 			favorites.renderFavorites('#items');
 		}
-	}, 500);
+	}, 200);
 
     //This does not work. Why?
     $("#index").on( "pageinit", function() {

@@ -63,11 +63,6 @@ var favorites = {
 
 
 	renderFavorites: function(target) {
-		$.mobile.loading("show", {
-			text: "Loading more tweets...",
-			textVisible: true
-		});
-
 		var i = favorites.tweetIndex;
 		
 		//iterate through the next batch of tweets to be rendered, but stop
@@ -100,7 +95,6 @@ var favorites = {
 			i++;
 		}
 		favorites.tweetIndex += favorites.TWEETS_PER_SCROLL;
-		$.mobile.loading("hide");
 	},
     /* "PRIVATE" */
 
