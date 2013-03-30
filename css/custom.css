@@ -26,8 +26,12 @@
 .name {
     font-size: 16px;
     font-weight: bold;
-    padding-right: 5px;
+}
+
+/* The names in the main list. */
+.tweet .name {
     white-space: nowrap;
+    padding-right: 5px;
 }
 
 /*Make all tags and links appear in small gray like Twitter does*/
@@ -83,12 +87,12 @@ td {
 		padding-left: 5px;
 	}
 	
-	/* Display the name and the user tag on their own line on small screens */
-	.name {
+	/* Display the in-tweet name and the user tag on their own line on small screens */
+	.tweet .name {
 	    display: block;
 	}
 	
-	.usertag {
+	.tweet .usertag {
 	    padding-top: .1em;
 	    display: block;
 	}
