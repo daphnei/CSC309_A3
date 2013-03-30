@@ -25,7 +25,8 @@ var generateDetailsView = {
         shtml += "<div class='avatar'><img src='" + tweet.user.image + "'/></div>";
         
         shtml += "<div class='name'><p>" + tweet.user.name + "<br />";
-        shtml += "<span class='usertag'>@" + tweet.user.screen_name + "</span></p></div>";
+        shtml += "<a class='usertag' href='" + tweet.user.account;
+        shtml += "'>@" + tweet.user.screen_name + "</a></p></div>";
         shtml += "<div class='clear-both'></div></div>";
 
         shtml += "<div class='detail-text'>";
