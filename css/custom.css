@@ -10,7 +10,6 @@
 
 /* The names in the main list. */
 .tweet .name {
-    white-space: nowrap;
     padding-right: 5px;
 }
 
