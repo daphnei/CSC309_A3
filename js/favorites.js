@@ -85,7 +85,6 @@ var favorites = {
 				tweet = favorites.getTweetObject(this);
                 
 				if (tweet !== undefined) {
-                    console.log(generateDetailsView.generateDetailsContent(tweet));
 					//$("#details-header").html(generateDetailsView.generateDetailsHeader(tweet)); 
 					$("#details-content").html(generateDetailsView.generateDetailsContent(tweet));
 				}
