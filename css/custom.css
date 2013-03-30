@@ -97,8 +97,8 @@ td {
     }
 }
 
-/*0th breakpoint is 600 px:
-	For less small phones/tablets, keep the single column, but switch to large-style popup*/
+/* 0th breakpoint is 600 px:
+	For less small phones/tablets (600-768 px) , keep the single column, but switch to large-style popup*/
 @media all and (min-width: 600px){
     /* Styles for the detail popup - float the user info and description side-by-side */
     .detail-user {
@@ -118,15 +118,25 @@ td {
     /* Styles from tutorial code*/
     #index .ui-content {
         padding: 9px;
-    }
+    }	
     
     #index .ui-listview .ui-li.ui-btn {
         float: left;
         width: 47%; /* 33.3333% incl. 2 x 1.2% margin */
-        height: 80px;
+        height: 90px;
         margin: 9px 1.2%;
         border-width: 0; /* The 1px border would break the layout so we set it on .ui-btn-inner instead. */
     }
+
+    /* Inherit the border-radius from the top left list item. Ensures that all items have pretty rounded corners. */
+    #index .ui-listview .ui-li,
+    #index .ui-listview .ui-btn-text,
+    #index .ui-listview .ui-link-inherit {
+        -webkit-border-radius: inherit;
+        border-radius: inherit;
+    }
+
+    
 }
 
 /* Second breakpoint:
