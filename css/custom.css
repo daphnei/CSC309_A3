@@ -22,10 +22,18 @@
 	float:none; 
 }
 
+/* The person's name, to the left or top of the @ user tag. */
+.name {
+    font-size: 16px;
+    font-weight: bold;
+    padding-right: 5px;
+    white-space: nowrap;
+}
+
 /*Make all tags and links appear in small gray like Twitter does*/
 .usertag {
 	color:rgb(200,200,200);
-	font-size:80%;
+	font-size: 14px;
 	text-decoration:none;
 }
 
@@ -50,6 +58,11 @@
     white-space: normal;
 }
 
+/* Top-align the avatars */
+td {
+    vertical-align: top;
+}
+
 /* 1st breakpoint - For small phones */ 
 @media all and (max-width: 34em) {
 	.breakpoint.ui-grid-b .ui-block-a,
@@ -64,16 +77,21 @@
 	    overflow: visible;
 	    white-space: normal;
 	}
-	/*Make the borders smaller than the default when on smaller screens*/
+	/*Make the borders smaller than the default when on smaller screens */
 	.ui-li .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li {
 		display: block;
-		padding: 0.1em 5px;
+		padding-left: 5px;
 	}
-
-    /* Top-align the avatars */
-    td {
-        vertical-align: top;
-    }
+	
+	/* Display the name and the user tag on their own line on small screens */
+	.name {
+	    display: block;
+	}
+	
+	.usertag {
+	    padding-top: .1em;
+	    display: block;
+	}
 }
 
 

@@ -54,8 +54,9 @@ var generateListView = {
         var account = tweet.user.account;
         
         var shtml = "";
-        shtml += "<h3 class='name'>" + name;
-        shtml += " <a href='" + account + "' class='usertag'>@" + screen_name + "</a></h3>";
+        shtml += "<p><span class='name'>" + name + "</span>";
+        shtml += "<a class='usertag' href='" + account + "'>@" + screen_name;
+        shtml += "</a></p>";
         return shtml;
     },
 
