@@ -87,7 +87,6 @@
     $("#index").on( "pageinit", function() {
                 $( "#popupPhoto" ).on({
                     popupbeforeposition: function() {
-                        console.log("Should be resizing photo.");
                         var maxHeight = $( window ).height() - 60 + "px";
                         $( "#popupPhoto img" ).css( "max-height", maxHeight );
                     }

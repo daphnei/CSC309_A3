@@ -101,6 +101,18 @@ var favorites = {
     			        imageTag += ('<img src=' + tweet.data.photos[i] + '/>');
     			    }
     			    $("#images").html(imageTag);
+    			    
+    			    // Fallback in case the browser doesn't fire a load event
+    			    var fallback = setTimeout(function() {
+    			    	$("#popupPhoto").popup("open");
+    			    }, 2000);
+    			    
+    			    // Wait for the image to load before popping up the popup.
+    			    $("#images img").load(function() {
+    			        $("#popupPhoto").popup("open");
+    					// Clear the fallback
+    					clearTimeout(fallback);
+    			    });
 			    }
 			});
 			
