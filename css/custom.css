@@ -60,6 +60,12 @@ td {
     text-align: center;
 }
 
+/* Format the notification about reaching the end of tweets. */
+.end-notification p {
+    text-align: center;
+    font-size: 12px;
+}
+
 /* For very small phones change the formatting the popup*/ 
 @media all and (max-width: 500px){
 	
