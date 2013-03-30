@@ -95,9 +95,20 @@ td {
         float: left;
         padding-right: 10px;
     }
+
+    /* when the screen is very small reduce padding at top and bottom*/
+    .ui-content {
+    border-width: 0;
+	overflow-x: hidden;
+	overflow-y: visible;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+    }
 }
 
-/* 0th breakpoint is 600 px:
+/* zeroth breakpoint is 600 px:
 	For less small phones/tablets (600-768 px) , keep the single column, but switch to large-style popup*/
 @media all and (min-width: 600px){
     /* Styles for the detail popup - float the user info and description side-by-side */
@@ -109,6 +120,15 @@ td {
     .detail-text {
         float: right;
         max-width: 400px;
+    }
+
+    /* Pretty animation effects. If you really hate them, we can take them out. */
+    #index .ui-listview .ui-btn {
+        -webkit-transition: all 500ms ease;
+        -moz-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+        -ms-transition: all 500ms ease;
+        transition: all 500ms ease;
     }
 }
 
@@ -136,7 +156,19 @@ td {
         border-radius: inherit;
     }
 
-    
+    /* Add shadow to listview items. */
+    .my-page .ui-listview .ui-btn:not(.ui-focus) {
+        -moz-box-shadow: 0px 0px 9px #111;
+        -webkit-box-shadow: 0px 0px 9px #111;
+        box-shadow: 0px 0px 9px #111;
+    }
+
+    /* Images mask the hover bg color so we give desktop users feedback by applying the focus style on hover as well. */
+    .my-page .ui-listview .ui-btn:hover {
+        -moz-box-shadow: 0px 0px 12px #387bbe;
+        -webkit-box-shadow: 0px 0px 12px #387bbe;
+        box-shadow: 0px 0px 12px #387bbe;
+    }
 }
 
 /* Second breakpoint:
