@@ -75,12 +75,11 @@ var favorites = {
 			var tweet = favorites.tweets[i];
 		
 			var html = generateListView.generateHTML(tweet, i);
-			$(target).append(html);
-			$(target).listview("refresh");
-			$("a[data-role='button']").button();
+			
+			var domTweet = $(html);
 			
 			// Bind the function that will populate the details dialog with delicious content.
-			$(target).find(".tweet").click(function(event) {
+			domTweet.click(function(event) {
 
 				tweet = favorites.getTweetObject(this);
                 
@@ -91,7 +90,7 @@ var favorites = {
 			});
 			
 			// Bind the function that will populate the image popup with purty pictures.
-			$(target).find(".photo-button").click(function(event) {
+			domTweet.find(".photo-button").click(function(event) {
 			
 			    tweet = favorites.getTweetObject($(this).parents(".tweet")[0]);
 			    
@@ -102,19 +101,23 @@ var favorites = {
     			    }
     			    $("#images").html(imageTag);
     			    
-    			    // Fallback in case the browser doesn't fire a load event
-    			    var fallback = setTimeout(function() {
-    			    	$("#popupPhoto").popup("open");
-    			    }, 2000);
-    			    
     			    // Wait for the image to load before popping up the popup.
     			    $("#images img").load(function() {
     			        $("#popupPhoto").popup("open");
     					// Clear the fallback
     					clearTimeout(fallback);
     			    });
+    			    
+    			    // Fallback in case the browser doesn't fire a load event
+    			    var fallback = setTimeout(function() {
+    			    	$("#popupPhoto").popup("open");
+    			    }, 2000);
 			    }
 			});
+			
+			$(target).append(domTweet);
+			$(target).listview("refresh");
+			$("a[data-role='button']").button();
 			
 			i++;
 		}
