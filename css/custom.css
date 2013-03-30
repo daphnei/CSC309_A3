@@ -2,26 +2,6 @@
  * should look at this code and actually learn how it works, and add it
  * back in again later*/
 
-/* Basic styles */
-.rwd-example div {
-	text-align:left;
-	border-color:#ddd;
-	margin-bottom:1em;
-}
-
-.rwd-example p {
-	color:#777;
-	line-height:140%
-}
-
-/* Stack all blocks to start */
-.rwd-example .ui-block-a, 
-.rwd-example .ui-block-b, 
-.rwd-example .ui-block-c { 
-	width: 100%; 
-	float:none; 
-}
-
 /* The person's name, to the left or top of the @ user tag. */
 .name {
     font-size: 16px;
@@ -67,20 +47,37 @@ td {
     vertical-align: top;
 }
 
-/* 1st breakpoint - For small phones */ 
-@media all and (max-width: 34em) {
-	.breakpoint.ui-grid-b .ui-block-a,
-	.breakpoint.ui-grid-b .ui-block-b,
-	.breakpoint.ui-grid-b .ui-block-c{
-		width: 100%; 
-		float:none; 
-	}
+/* Used to ensure divs containing floating divs are properly expanded. */
+.clear-both {
+    clear: both;
+}
 
-	.ui-block-c p {
-		word-wrap: break-word;
-	    overflow: visible;
-	    white-space: normal;
-	}
+/* Universal styles for the detail popup */
+.detail-text {
+    word-wrap: break-word;
+    white-space: normal;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+/* 1st breakpoint - For larger devices */ 
+@media all {
+    /* Styles for the detail popup - float the user info and description side-by-side */
+    .detail-user {
+        float: left;
+        max-width: 100px;
+    }
+    
+    .detail-text {
+        float: right;
+        max-width: 400px;
+    }
+}
+
+/* 2nd breakpoint - For small phones */ 
+@media all and (max-width: 34em) {
+	
 	/*Make the borders smaller than the default when on smaller screens */
 	.ui-li .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li {
 		display: block;
@@ -96,13 +93,22 @@ td {
 	    padding-top: .1em;
 	    display: block;
 	}
-}
-
-
-/* 2nd breakpoint - Float all, 50/25/25 */ 
-@media all {
-	.breakpoint.ui-grid-b .ui-block-a { width: 60px; }
-	.breakpoint.ui-grid-b .ui-block-b { width: 100px; }
-	.breakpoint.ui-grid-b .ui-block-c { width: 400px; }
-	.breakpoint.ui-grid-b .ui-block-a { clear: left; }
+	
+    /* Styles for the detail dialog */
+    .detail-user {
+        max-width: inherit;
+        float: none;
+        clear: both;
+    }
+    
+    .detail-text {
+        max-width: inherit;
+        float: none;
+        clear: both;
+    }
+    
+    .detail-user .avatar {
+        float: left;
+        padding-right: 10px;
+    }
 }
