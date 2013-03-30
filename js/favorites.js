@@ -78,20 +78,31 @@ var favorites = {
 			$(target).append(html);
 			$(target).listview("refresh");
 			$("a[data-role='button']").button();
+			
 			// Bind the function that will populate the details dialog with delicious content.
 			$(target).find(".tweet").click(function(event) {
 
-				// find the tweet this click landed on using the id
-				var id = $(this).attr("id");
-				var tweet = favorites.tweets[id];
-                console.log("ID reported as: " + id);
+				tweet = favorites.getTweetObject(this);
+                
 				if (tweet !== undefined) {
                     console.log(generateDetailsView.generateDetailsContent(tweet));
 					//$("#details-header").html(generateDetailsView.generateDetailsHeader(tweet)); 
 					$("#details-content").html(generateDetailsView.generateDetailsContent(tweet));
-				} else {
-					console.log("Could not find tweet with id: " + id);
 				}
+			});
+			
+			// Bind the function that will populate the image popup with purty pictures.
+			$(target).find(".photo-button").click(function(event) {
+			
+			    tweet = favorites.getTweetObject($(this).parents(".tweet")[0]);
+			    
+			    if (tweet !== undefined) {
+    			    var imageTag = "";
+    			    for (var i = 0; i < tweet.data.photos.length; i++) {
+    			        imageTag += ('<img src=' + tweet.data.photos[i] + '/>');
+    			    }
+    			    $("#images").html(imageTag);
+			    }
 			});
 			
 			i++;
@@ -104,6 +115,23 @@ var favorites = {
 	},
 
     /* "PRIVATE" */
+    
+    /**
+     * Gets the tweet object associated with a DOM object.
+     *
+     * @param domTweet The DOM object where the tweet is displayed.
+     *
+     * @returns The tweet object associated with the DOM object.
+     */
+    getTweetObject: function(domTweet) {
+        // find the tweet this click landed on using the id
+        var id = $(domTweet).attr("id");
+        var tweet = favorites.tweets[id];
+        if (tweet === undefined) {
+        	console.log("Could not find tweet with id: " + id);
+        }
+        return tweet;
+    },
 
     /**
      * Extract all the links from a tweet.

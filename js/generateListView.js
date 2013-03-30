@@ -152,13 +152,8 @@ var generateListView = {
     
     generateImages: function(tweet) {
         if (tweet.data.photos.length > 0)  {
-            var imageTag = "";
-            for (var i = 0; i < tweet.data.photos.length; i++) {
-                imageTag += ('<img src=' + tweet.data.photos[i] + '/>');
-            }
-            $("#images").html(imageTag);
             return "<a href='#popupPhoto' data-rel='popup' data-icon='star' data-iconpos='notext'" +
-                    "data-role='button' data-mini='true' data-inline='true'>View Photo</a>";
+                    "data-role='button' data-mini='true' data-inline='true' class='photo-button'>View Photo</a>";
         } else {
             return "";
         }
