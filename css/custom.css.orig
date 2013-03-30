@@ -42,6 +42,17 @@
     white-space: normal;
 }
 
+<<<<<<< HEAD
+/* Format the notification that no more tweets remain. */
+.end-notification p {
+    text-align: center;
+    vertical-align: top;
+    font-size: 75%; 
+}
+
+/* 1st breakpoint - Float B and C, leave A full width on top */ 
+@media all and (max-width: 34em) {
+=======
 /* Top-align the avatars */
 td {
     vertical-align: top;
@@ -59,11 +70,7 @@ td {
     font-size: 12px;
     text-align: center;
 }
-
-.end-notification p {
-    text-align: center;
-    font-size: 12px;
-}
+>>>>>>> 0aca8b49dd7eae9c628f344a72297d1d23330aae
 
 /* For very small phones change the formatting the popup*/ 
 @media all and (max-width: 500px){

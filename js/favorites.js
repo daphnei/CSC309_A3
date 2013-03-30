@@ -34,10 +34,11 @@ var favorites = {
                 user = {
                     name: tweet.user.name,
                     screen_name: tweet.user.screen_name,
-                    location: tweet.user.location,
+                    location: tweet.user.location.length > 0? tweet.user.location : null,
                     description: tweet.user.description,
-                    url: tweet.user.url,
+                    website: tweet.user.url,
                     account: "http://twitter.com/" + tweet.user.screen_name,
+                    background: tweet.user.profile_background_image_url, 
                     image: tweet.user.profile_image_url
                 };
                 
@@ -47,6 +48,7 @@ var favorites = {
                     date: tweet.created_at,
                     links: favorites.extractLinks(tweet),
                     photos: favorites.extractPhotos(tweet),
+                    media: favorites.extractMedia(tweet),
                     mentions: favorites.extractMentions(tweet),
                     hashtags: favorites.extractTags(tweet)
                 };
@@ -73,24 +75,49 @@ var favorites = {
 			var tweet = favorites.tweets[i];
 		
 			var html = generateListView.generateHTML(tweet, i);
-			$(target).append(html);
+			
+			var domTweet = $(html);
+			
+			// Bind the function that will populate the details dialog with delicious content.
+			domTweet.click(function(event) {
+
+				tweet = favorites.getTweetObject(this);
+                
+				if (tweet !== undefined) {
+					//$("#details-header").html(generateDetailsView.generateDetailsHeader(tweet)); 
+					$("#details-content").html(generateDetailsView.generateDetailsContent(tweet));
+				}
+			});
+			
+			// Bind the function that will populate the image popup with purty pictures.
+			domTweet.find(".photo-button").click(function(event) {
+			
+			    tweet = favorites.getTweetObject($(this).parents(".tweet")[0]);
+			    
+			    if (tweet !== undefined) {
+    			    var imageTag = "";
+    			    for (var i = 0; i < tweet.data.photos.length; i++) {
+    			        imageTag += ('<img src=' + tweet.data.photos[i] + '/>');
+    			    }
+    			    $("#images").html(imageTag);
+    			    
+    			    // Wait for the image to load before popping up the popup.
+    			    $("#images img").load(function() {
+    			        $("#popupPhoto").popup("open");
+    					// Clear the fallback
+    					clearTimeout(fallback);
+    			    });
+    			    
+    			    // Fallback in case the browser doesn't fire a load event
+    			    var fallback = setTimeout(function() {
+    			    	$("#popupPhoto").popup("open");
+    			    }, 2000);
+			    }
+			});
+			
+			$(target).append(domTweet);
 			$(target).listview("refresh");
 			$("a[data-role='button']").button();
-			// Bind the function that will populate the details dialog with delicious content.
-			/*$(target).find(".tweet").click(function(event) {
-
-				// find the tweet this click landed on using the id
-				var id = $(this).attr("id");
-				var tweet = favorites.tweets[id];
-                console.log("ID reported as: " + id);
-				if (tweet !== undefined) {
-                    console.log(generateDetailsView.generateDetailsContent(tweet));
-					$("#details-header").html(generateDetailsView.generateDetailsHeader(tweet)); 
-					$("#details-content").html(generateDetailsView.generateDetailsContent(tweet));
-				} else {
-					console.log("Could not find tweet with id: " + id);
-				}
-			});*/
 			
 			i++;
 		}
@@ -100,7 +127,25 @@ var favorites = {
 	unrenderedTweets: function() {
 		return favorites.tweetIndex < favorites.tweets.length; 	
 	},
+
     /* "PRIVATE" */
+    
+    /**
+     * Gets the tweet object associated with a DOM object.
+     *
+     * @param domTweet The DOM object where the tweet is displayed.
+     *
+     * @returns The tweet object associated with the DOM object.
+     */
+    getTweetObject: function(domTweet) {
+        // find the tweet this click landed on using the id
+        var id = $(domTweet).attr("id");
+        var tweet = favorites.tweets[id];
+        if (tweet === undefined) {
+        	console.log("Could not find tweet with id: " + id);
+        }
+        return tweet;
+    },
 
     /**
      * Extract all the links from a tweet.
@@ -145,6 +190,32 @@ var favorites = {
 
         return new Array();
     },
+    
+    
+    /**
+     * Extract all media from a tweet object.
+     * Note: This does partly duplicate the functionality of extractPhotos,
+     * but it's necessary because twitter treats "photos" and "URLs"
+     * separately, despite the fact that pictures are represented as URLs.
+     *
+     * @param tweet The tweet object you want to extract the media for.
+     * 
+     * @returns A list of media objects.
+     */
+     extractMedia: function(tweet) {
+         var media = tweet.entities.media;
+         if (media !== undefined) {
+             return media.map(function(medium) {
+                 return {
+                     "url": medium.url,
+                     "indices": medium.indices
+                 };
+             });
+         }
+         
+         return new Array();
+     },
+     
 
     /**
      * Extract all the mentions from a tweet.

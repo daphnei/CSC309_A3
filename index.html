@@ -45,22 +45,18 @@
         
 		<!-- POPUPS -->
         <!-- TWEETER DETAILS POPUP -->
-        <div data-role="popup" id="details" class="ui-corner-all" data-transition="pop" data-theme="a" data-overlay-theme="a">
-            <div data-role="header">
-                <h1 id="details-header">
-                    <!-- Dynamic popup title will be loaded here. -->
-                </h1>
-        	</div>
-        	
-        	<div data-role="content" class="ui-content" id="details-content">
-                <!-- Dynamic popup content will be loaded here. -->
+        <div data-role="popup" data-theme="b" data-overlay-theme="a" id="details" class="ui-corner-all" data-transition="pop"  data-position-to="window">
+        	<div data-role="content" class="ui-content">
+                <div id="details-content">
+                    <!-- Dynamic popup content will be loaded here. -->
+                </div>
             </div>
             
             <a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right ">Close</a>
         </div>
 
-        <!-- IMAGE POPUP -->
-        <div data-role="popup" data-transition="pop" id="popupPhoto" data-position-to="window" data-overlay-theme="a">
+        <!-- Image popup -->
+        <div data-role="popup" data-corners="false". data-transition="pop" id="popupPhoto" data-position-to="window" data-overlay-theme="a">
             <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
             <div id="images">
                 <!-- Images will be loaded here-->
@@ -91,11 +87,26 @@
     $("#index").on( "pageinit", function() {
                 $( "#popupPhoto" ).on({
                     popupbeforeposition: function() {
-                        console.log("Should be resizing photo.");
                         var maxHeight = $( window ).height() - 60 + "px";
                         $( "#popupPhoto img" ).css( "max-height", maxHeight );
                     }
                 });
             });
+
+    $(function(){
+        $(window).resize(function(){
+        // get the screen height and width  
+        var maskHeight = $(window).height();  
+        var maskWidth = $(window).width();
+
+        // calculate the values for center alignment
+        var dialogTop =  (maskHeight  - $('#dialog-box').height())/2;  
+        var dialogLeft = (maskWidth - $('#dialog-box').width())/2; 
+
+        // assign values to the overlay and dialog box
+        $('#dialog-overlay').css({ height:$(document).height(), width:$(document).width() }).show();
+        $('#dialog-box').css({ top: dialogTop, left: dialogLeft, position:"fixed"}).show();
+        }).resize();
+    });
 </script>
 

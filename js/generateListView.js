@@ -27,7 +27,8 @@ var generateListView = {
         
         // setup the tags enclosing the tweet content
         var shtml = "";
-        shtml += "<li class='tweet' id='" + id + "'>";
+        shtml += "<li class='tweet' data-icon='false' id='" + id + "'>";
+        shtml += "<a href='#details' data-rel='popup'>";
         shtml += "<table><tr>";
         
         // generate and add in all the tweet content
@@ -43,7 +44,7 @@ var generateListView = {
         shtml += "</td>";
         
         // close the tags enclosing content
-        shtml += "</tr></table></li>";
+        shtml += "</tr></table></a></li>";
         return shtml;
     },
 
@@ -52,9 +53,10 @@ var generateListView = {
         var screen_name = tweet.user.screen_name;
         var account = tweet.user.account;
         
-        shtml = "";
-        shtml += "<h3 class='name'>" + name;
-        shtml += " <a href='" + account + "' class='usertag'>@" + screen_name + "</a></h3>";
+        var shtml = "";
+        shtml += "<p><span class='name'>" + name + "</span>";
+        shtml += "<a class='usertag' href='" + account + "'>@" + screen_name;
+        shtml += "</a></p>";
         return shtml;
     },
 
@@ -62,9 +64,9 @@ var generateListView = {
         var account = tweet.user.account;
         var avatar = tweet.user.image;
 
-        shtml = "<a href='" + account + "'>";
-        shtml += "<img class='avatar' width='48px' src='" + avatar + "'/>";
-        shtml += "</a>";
+        //shtml = "<a href='" + account + "'>";
+        var shtml = "<img class='avatar' width='48px' src='" + avatar + "'/>";
+        //shtml += "</a>";
         return shtml;
     },
 
@@ -122,6 +124,20 @@ var generateListView = {
             });
         });
         
+        // Add in links to media urls mentioned within the tweet text
+        $.each(tweet.data.media, function(index, medium) {
+            // Same idea as the hashtags
+            insertions.push({
+                text: "<a href ='" + medium.url + "' class='tweetlink' target='_blank'>",
+                index: medium.indices[0]
+            });
+            
+            insertions.push({
+                text: "</a>",
+                index: medium.indices[1]
+            });
+        });
+        
         // Now that we've built up the array of insertions, use it to insert the links at the proper location.
         text = helper.insertMultiple(text, insertions);
         
@@ -137,10 +153,8 @@ var generateListView = {
     
     generateImages: function(tweet) {
         if (tweet.data.photos.length > 0)  {
-            var imageTag = '<img src=' + tweet.data.photos[0] + '/>';
-            $("#images").html(imageTag);
-            return "<a href='#popupPhoto' data-rel='popup' data-icon='star' data-iconpos='notext'" +
-                    "data-role='button' data-mini='true' data-inline='true'>View Photo</a>";
+            return "<a href='#' data-icon='star' data-iconpos='notext' data-role='button'" +
+                   " data-mini='true' data-inline='true' class='photo-button'>View Photo</a>";
         } else {
             return "";
         }
