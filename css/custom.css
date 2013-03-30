@@ -66,6 +66,11 @@ td {
     font-size: 12px;
 }
 
+/* Custom icon for showing photos. */
+.ui-icon-camera {
+    background-image: url("../res/camera.png")
+}
+
 /* For very small phones change the formatting the popup*/ 
 @media all and (max-width: 500px){
 	
