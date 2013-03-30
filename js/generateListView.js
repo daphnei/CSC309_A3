@@ -27,7 +27,7 @@ var generateListView = {
         
         // setup the tags enclosing the tweet content
         var shtml = "";
-        shtml += "<li class='tweet' id='" + id + "'>";
+        shtml += "<li class='tweet' data-icon='false' id='" + id + "'>";
         shtml += "<a href='#details' data-rel='popup'>";
         shtml += "<table><tr>";
         
