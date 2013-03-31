@@ -71,11 +71,6 @@ td {
     background-image: url("../res/camera.png")
 }
 
-/* Show search bar on same line as webpage title */
-.header * {
-    display: inline-block;
-}
-
 /* For very small phones change the formatting the popup*/ 
 @media all and (max-width: 500px){
 	
@@ -115,13 +110,13 @@ td {
 
     /* when the screen is very small reduce padding at top and bottom*/
     .ui-content {
-    border-width: 0;
-	overflow-x: hidden;
-	overflow-y: visible;
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-top: 0px;
-	padding-bottom: 0px;
+        border-width: 0;
+        overflow-x: hidden;
+        overflow-y: visible;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 0px;
+        padding-bottom: 0px;
     }
 }
 
@@ -160,7 +155,7 @@ td {
     #index .ui-listview .ui-li.ui-btn {
         float: left;
         width: 47%; /* 33.3333% incl. 2 x 1.2% margin */
-        height: 90px;
+        height: 110px;
         margin: 9px 1.2%;
         border-width: 0; /* The 1px border would break the layout so we set it on .ui-btn-inner instead. */
     }
@@ -207,7 +202,7 @@ td {
     
     #index .ui-listview .ui-li.ui-btn {
         width: 30%;
-        height: 100px;
+        height: 110px;
         margin: 5px 5px;
     }
 }
