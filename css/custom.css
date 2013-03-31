@@ -125,6 +125,10 @@ td {
     }
 }
 
+/*for screens between 500 and 600 pixels, the popups should still be in the small format, the 
+listview should still be one column, but don't impose the padding restriction that the above 
+media query puts in*/
+
 /* zeroth breakpoint is 600 px:
 	For less small phones/tablets (600-768 px) , keep the single column, but switch to large-style popup*/
 @media all and (min-width: 600px){
@@ -206,7 +210,7 @@ td {
     but we stick to percentage values for demo purposes. */
     
     #index .ui-listview .ui-li.ui-btn {
-        width: 30%;
+        width: 32%;
         height: 100px;
         margin: 5px 5px;
     }
