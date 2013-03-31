@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>jQuery Mobile: Theme Download</title>
+	<title>Flutter</title>
 	
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile.structure-1.3.0.min.css" />
 	<link rel="stylesheet" href="css/themes/Flutter.min.css" />
@@ -26,12 +26,11 @@
         <!-- HEADER -->
 		<div data-role="header" data-id="mobile-header">
             <h1>Flutter</h1>
-            <input type="search" name="search" id="search-header" value="Filter tweets" data-mini="true" data-inline="true" /> 
-   		</div>
+        </div>
         <!-- MAIN BODY -->
         <div data-role="content">
-            <ul data-role="listview" id="items" data-inset="true">
-            <!-- Dynamic items will be generated here -->
+            <ul data-role="listview" id="items" data-inset="true" data-filter="true">
+                <!-- Dynamic items will be generated here -->
             </ul>
         </div>
 

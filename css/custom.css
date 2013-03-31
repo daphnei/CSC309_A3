@@ -71,6 +71,11 @@ td {
     background-image: url("../res/camera.png")
 }
 
+/* Show search bar on same line as webpage title */
+.header * {
+    display: inline-block;
+}
+
 /* For very small phones change the formatting the popup*/ 
 @media all and (max-width: 500px){
 	

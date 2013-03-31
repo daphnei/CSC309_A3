@@ -153,7 +153,7 @@ var generateListView = {
     
     generateImages: function(tweet) {
         if (tweet.data.photos.length > 0)  {
-            return "<a href='#' data-icon='star' data-iconpos='notext' data-role='button'" +
+            return "<a href='#' data-icon='camera' data-iconpos='notext' data-role='button'" +
                    " data-mini='true' data-inline='true' class='photo-button'>View Photo</a>";
         } else {
             return "";
