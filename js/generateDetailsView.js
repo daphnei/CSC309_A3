@@ -33,18 +33,16 @@ var generateDetailsView = {
         shtml += "<p>" + tweet.user.description + "</p>";
 
         //format the location and website pretty with a dot between them like Twitter does
+        shtml += "<p>"
         if (tweet.user.location != null)
-            shtml += "<p>" + tweet.user.location;
-        else shtml += "<p>";
+            shtml += "<b>Location</b>: " + tweet.user.location;
 
         if (tweet.user.website != null) {
             if (tweet.user.location != null)
-                shtml += " · ";
-            shtml += "<a href='" + tweet.user.website + "' class='tweetlink'>" + tweet.user.website + "</p>";
-        } else{
-            shtml += "</p>";
+                shtml += "<br/>";
+            shtml += "<b>Website</b>: <a href='" + tweet.user.website + "' class='tweetlink'>" + tweet.user.website;
         }
-        
+        shtml += "</p>";
         shtml += "</div>";
         shtml += "<div class='clear-both'></div>";
         return shtml;

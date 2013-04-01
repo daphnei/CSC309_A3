@@ -64,8 +64,14 @@ td {
 .end-notification p {
     text-align: center;
     font-size: 12px;
+    color: #111111;
 }
 
+.jqm-footer p {
+    margin-left: 25px;
+    font-size: 11px;
+    color: #111111;
+}
 /* Custom icon for showing photos. */
 .ui-icon-camera {
     background-image: url("../res/camera.png")
@@ -92,13 +98,13 @@ td {
 	
     /* Styles for the detail dialog */
     .detail-user {
-        max-width: inherit;
+        max-width: 75px;
         float: none;
         clear: both;
     }
     
     .detail-text {
-        max-width: inherit;
+        max-width: 375px;
         float: none;
         clear: both;
     }
@@ -122,7 +128,8 @@ td {
 
 /* zeroth breakpoint is 600 px:
 	For less small phones/tablets (600-768 px) , keep the single column, but switch to large-style popup*/
-@media all and (min-width: 600px){
+@media all and (min-width: 600px) {
+    
     /* Styles for the detail popup - float the user info and description side-by-side */
     .detail-user {
         float: left;
@@ -131,7 +138,7 @@ td {
     
     .detail-text {
         float: right;
-        max-width: 400px;
+        max-width: 375px;
     }
 
     /* Pretty animation effects. If you really hate them, we can take them out. */
@@ -146,7 +153,19 @@ td {
 
 /* First breakpoint is 768px:
 	Switch to 2 column layout.  */
-@media all and (min-width: 768px){
+@media all and (min-width: 768px) {
+    
+    /* Styles for the detail popup - give a bit more space for everything to fit. */
+    .detail-user {
+        float: left;
+        max-width: 150px;
+    }
+    
+    .detail-text {
+        float: right;
+        max-width: 450px;
+    }
+
     /* Styles from tutorial code*/
     #index .ui-content {
         padding: 9px;
@@ -155,7 +174,7 @@ td {
     #index .ui-listview .ui-li.ui-btn {
         float: left;
         width: 47%; /* 33.3333% incl. 2 x 1.2% margin */
-        height: 110px;
+        height: 115px;
         margin: 9px 1.2%;
         border-width: 0; /* The 1px border would break the layout so we set it on .ui-btn-inner instead. */
     }
@@ -186,10 +205,12 @@ td {
 /* Second breakpoint:
 	Switch to 3 column layout. */
 @media all and (min-width: 1320px){
+    
     /* Styles from tutorial code*/
     #index .ui-content {
         padding: 10px;
     }
+    
     /* Set a max-width for the last breakpoint to prevent too much stretching on large screens.
     By setting the max-width equal to the breakpoint width minus padding we keep square tiles. */
     
@@ -197,12 +218,13 @@ td {
         max-width: 1300px;
         margin: 0 auto;
     }
+    
     /* Because of the 1000px max-width the width will always be 230px (and margin left/right 10px),
     but we stick to percentage values for demo purposes. */
     
     #index .ui-listview .ui-li.ui-btn {
         width: 30%;
-        height: 110px;
+        height: 115px;
         margin: 5px 5px;
     }
 }
