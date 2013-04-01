@@ -227,8 +227,13 @@ media query puts in*/
     but we stick to percentage values for demo purposes. */
     
     #index .ui-listview .ui-li.ui-btn {
+<<<<<<< HEAD
+        width: 30%;
+        height: 115px;
+=======
         width: 32%;
         height: 110px;
+>>>>>>> 776723aba809e789d25a75d37b3ba07668c3f497
         margin: 5px 5px;
     }
 }
