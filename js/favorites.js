@@ -74,7 +74,7 @@ var favorites = {
 					
 			var tweet = favorites.tweets[i];
 		
-			var html = generateList.generateHTML(tweet, i);
+			var html = list.generateHTML(tweet, i);
 			
 			var domTweet = $(html);
 			
@@ -84,8 +84,8 @@ var favorites = {
 				tweet = favorites.getTweetObject(this);
                 
 				if (tweet !== undefined) {
-					$("#details-header").html(generateDetails.generateDetailsHeader(tweet)); 
-					$("#details-content").html(generateDetails.generateDetailsContent(tweet));
+					$("#details-header").html(details.generateDetailsHeader(tweet)); 
+					$("#details-content").html(details.generateDetailsContent(tweet));
 				}
 			});
 			
@@ -144,7 +144,7 @@ var favorites = {
         return favorites.filter(function(tweet) {
             return tweet.user.name == username;
         });
-    }
+    },
 
     /* "PRIVATE" */
     

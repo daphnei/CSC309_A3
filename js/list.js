@@ -2,10 +2,10 @@ var BREAK = "<br>"
 var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "Novemeber", "December"];
 
 /**
- * generateListView.js
+ * list.js
  * Generate html for a tweet in the main list view.
  */
-var generateList = {
+var list = {
 	
 	/**
 	 * Generate HTML from a tweet.

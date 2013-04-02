@@ -1,8 +1,8 @@
 /**
- * generateDetailsView.js
+ * details.js
  * Generation for the more detailed view of an individual tweet.
  */
-var generateDetails = {
+var details = {
 
     /**
      * Generates HTML for the header of the details dialog.
@@ -46,9 +46,9 @@ var generateDetails = {
     generateDetailsContent: function(tweet) {
         var shtml = "";
 
-        var shtml += "<h3>All tweets by this user:</h3>";
-        $.each(favorites.getAllTweets(tweet.user.name, function(tweet) {
-            shtml += generateList.generateHTML(tweet);
+        shtml += "<h3>All tweets by this user:</h3>";
+        $.each(favorites.getAllTweets(tweet.user.name), function(tweet) {
+            shtml += list.generateHTML(tweet);
         });
 
         return shtml;
