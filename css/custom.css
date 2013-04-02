@@ -31,10 +31,6 @@
     color:rgb(200,200,200);
 }
 
-.li {
-    padding-left: 60px;
-}
-
 /* Don't let text overflow in the tweets. */
 .ui-li-desc {
     text-overflow: ellipsis;
@@ -64,14 +60,9 @@ td {
 .end-notification p {
     text-align: center;
     font-size: 12px;
-    color: #111111;
+    color: #ffffff;
 }
 
-.jqm-footer p {
-    margin-left: 25px;
-    font-size: 11px;
-    color: #111111;
-}
 /* Custom icon for showing photos. */
 .ui-icon-camera {
     background-image: url("../res/camera.png")
