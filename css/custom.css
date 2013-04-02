@@ -135,6 +135,7 @@ td {
     #user-tweets {
         overflow-y: scroll;
         max-height: 200px;
+        -webkit-overflow-scrolling: touch;
     }
 }
 

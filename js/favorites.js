@@ -95,7 +95,7 @@ var favorites = {
 			// Bind the function that will populate the image popup with purty pictures.
 			domTweet.find(".photo-button").click(function(event) {
 			
-			    tweet = this.getTweetObject($(this).parents(".tweet")[0]);
+			    tweet = favorites.getTweetObject($(this).parents(".tweet")[0]);
 			    
 			    if (tweet !== undefined) {
     			    var imageTag = "";
