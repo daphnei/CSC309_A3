@@ -103,10 +103,6 @@ td {
         display: block;
     }
 
-    /* Make the load button smaller on smaller screens */
-    #newJSON {
-        font-size: 30px;
-    }
 }  
 
 /* info popups will apear on multiple lines for smaller screens */
