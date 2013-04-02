@@ -121,7 +121,7 @@ var favorites = {
 			
 			i++;
 		}
-		favorites.tweetIndex += favorites.TWEETS_PER_SCROLL;
+		this.tweetIndex += this.TWEETS_PER_SCROLL;
 	},
 
     /**
@@ -141,7 +141,7 @@ var favorites = {
      * @returns All the tweets made by the user.
      */
     getAllTweets: function(username) {
-        return favorites.filter(function(tweet) {
+        return .filter(function(tweet) {
             return tweet.user.name == username;
         });
     },
