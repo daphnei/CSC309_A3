@@ -68,6 +68,10 @@ td {
     background-image: url("../res/camera.png")
 }
 
+#index .ui-listview .ui-icon {
+    background-color: transparent;
+}
+
 /* For very small phones: 
     decrease padding and put usertag and twwet on separate lines*/ 
 @media all and (max-width: 500px){
