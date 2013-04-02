@@ -104,24 +104,28 @@ td {
 @media all {
     /* Styles for the detail dialog */
     .detail-user {
-        max-width: 75px;
+        // Center the view
+        margin-left: auto;
+        margin-right: auto;
+        
         float: none;
-        clear: both;
         text-align: center;
     }
     
     .detail-text {
         max-width: 375px;
         float: none;
-        clear: both;
+        word-wrap: break-word;
     }
     
     .detail-user .avatar {
         padding-top: 10px;
         padding-right: 10px;
-        clear: both;
-        text-align: center
-
+        text-align: center;
+    }
+    
+    .detail-user .name {
+        word-wrap: break-word;
     }
 }
 
