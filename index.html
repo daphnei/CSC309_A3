@@ -59,9 +59,9 @@
             <div data-role="content" class="ui-content">
                 <div data-role="content" class="ui-content">
                 <form>
-                    <label for="JSON_input">Enter the URL for a new favorites JSON file:</label>
-                    <input type="text" name="JSON_input" id="JSON_input" value="http://"  onclick="this.select()" >
-                    <button value="submitJSON" name="submit" data-icon="check" type="submit" onClick="parse(this.form)">Submit</button>
+                    <label for="JSON_input">Copy and paste new favorites JSON into the box.</label>
+                    <input type="text" name="JSON_input" id="JSON_input" value="copy JSON here"  onclick="this.select()" >
+                    <button value="submitJSON" name="submit" data-icon="check" type="submit" onClick="parseNewJSON(this.form)">Submit</button>
                     <a href="#" data-rel="back" data-role="button" data-icon="delete" class="ui-btn-right">Cancel</a>
 
                 </form>
@@ -81,10 +81,15 @@
 </html>
 
 <script>
-    parse = function(form) {
-        var newJSON = form.JSON_input.value;
+    /*
+    Takes in the results of the form asking for new JSON, and updates the listview with the new favorites information
+    */
+    parseNewJSON = function(form) {
+        var jsonText = form.JSON_input.value;
+        var json = eval(jsonText)
+        console.log(json)
         //parse into actual JSON
-        favorites.loadFavorites(newJSONurl, '#items');
+        //favorites.loadFavorites(newJSONurl, '#items');
     }
 
     window.onload=function(){
