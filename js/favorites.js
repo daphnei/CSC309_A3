@@ -87,7 +87,8 @@ var favorites = {
                 
 				if (tweet !== undefined) {
 					$("#details-header").html(details.generateDetailsHeader(tweet)); 
-					$("#details-content").html(details.generateDetailsContent(tweet));
+					$("#user-tweets").html(details.generateDetailsContent(tweet));
+                    $("#user-tweets").listview("refresh");
 				}
 			});
 			
