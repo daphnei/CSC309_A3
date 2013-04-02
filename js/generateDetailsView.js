@@ -21,15 +21,15 @@ var generateDetailsView = {
      */
     generateDetailsContent: function(tweet) {
         var shtml = "";
-        shtml += "<div class='detail-user'>";
+        shtml += "<span class='detail-user'>";
         shtml += "<div class='avatar'><img src='" + tweet.user.image + "'/></div>";
         
         shtml += "<div class='name'>" + tweet.user.name + "<br />";
         shtml += "<a class='usertag' href='" + tweet.user.account;
         shtml += "'>@" + tweet.user.screen_name + "</a></div>";
-        shtml += "<div class='clear-both'></div></div>";
+        shtml += "<div class='clear-both'></div></span>";
 
-        shtml += "<div class='detail-text'>";
+        shtml += "<span class='detail-text'>";
         shtml += "<p>" + tweet.user.description + "</p>";
 
         //format the location and website pretty with a dot between them like Twitter does
@@ -43,7 +43,7 @@ var generateDetailsView = {
             shtml += "<b>Website</b>: <a href='" + tweet.user.website + "' class='tweetlink'>" + tweet.user.website;
         }
         shtml += "</p>";
-        shtml += "</div>";
+        shtml += "</span>";
         shtml += "<div class='clear-both'></div>";
         return shtml;
     }

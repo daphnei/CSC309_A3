@@ -15,24 +15,20 @@
 
 /*Make all tags and links appear in small gray like Twitter does*/
 .usertag {
-	color:rgb(200,200,200);
-	font-size: 14px;
-	text-decoration:none;
+    color:rgb(200,200,200);
+    font-size: 14px;
+    text-decoration:none;
 }
 
 /*Make all tags and links appear in small gray like Twitter does*/
 .mention, .hashtag, .tweetlink {
-	color:#0084b4;
-	text-decoration:none;
+    color:#0084b4;
+    text-decoration:none;
 }
 
 /* For formatting the date for each tweet*/
 .date {
-	color:rgb(200,200,200);
-}
-
-.li {
-	padding-left: 60px;
+    color:rgb(200,200,200);
 }
 
 /* Don't let text overflow in the tweets. */
@@ -64,57 +60,25 @@ td {
 .end-notification p {
     text-align: center;
     font-size: 12px;
-    color: #111111;
+    color: #ffffff;
 }
 
-.jqm-footer p {
-    margin-left: 25px;
-    font-size: 11px;
-    color: #111111;
-}
 /* Custom icon for showing photos. */
 .ui-icon-camera {
     background-image: url("../res/camera.png")
 }
 
-/* For very small phones change the formatting the popup*/ 
+/* For very small phones: 
+    decrease padding and put usertag and twwet on separate lines*/ 
 @media all and (max-width: 500px){
-	
-	/*Make the borders smaller than the default when on smaller screens */
-	.ui-li .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li {
-		display: block;
-		padding-left: 5px;
-	}
-	
-	/* Display the in-tweet name and the user tag on their own line on small screens */
-	.tweet .name {
-	    display: block;
-	}
-	
-	.tweet .usertag {
-	    padding-top: .1em;
-	    display: block;
-	}
-	
-    /* Styles for the detail dialog */
-    .detail-user {
-        max-width: 75px;
-        float: none;
-        clear: both;
+    
+    /*Make the borders smaller than the default*/
+    .ui-li .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li {
+        display: block;
+        padding-left: 5px;
     }
     
-    .detail-text {
-        max-width: 375px;
-        float: none;
-        clear: both;
-    }
-    
-    .detail-user .avatar {
-        float: left;
-        padding-right: 10px;
-    }
-
-    /* when the screen is very small reduce padding at top and bottom*/
+    /* reduce padding at top and bottom*/
     .ui-content {
         border-width: 0;
         overflow-x: hidden;
@@ -124,10 +88,49 @@ td {
         padding-top: 0px;
         padding-bottom: 0px;
     }
+
+    /* Display the in-tweet name and the user tag on their own line on small screens */
+    .tweet .name {
+        display: block;
+    }
+    
+    .tweet .usertag {
+        padding-top: .1em;
+        display: block;
+    }
+}  
+
+/* info popups will apear on multiple lines for smaller screens */
+@media all {
+    /* Styles for the detail dialog */
+    .detail-user {
+        // Center the view
+        margin-left: auto;
+        margin-right: auto;
+        
+        float: none;
+        text-align: center;
+    }
+    
+    .detail-text {
+        max-width: 375px;
+        float: none;
+        word-wrap: break-word;
+    }
+    
+    .detail-user .avatar {
+        padding-top: 10px;
+        padding-right: 10px;
+        text-align: center;
+    }
+    
+    .detail-user .name {
+        word-wrap: break-word;
+    }
 }
 
-/* zeroth breakpoint is 600 px:
-	For less small phones/tablets (600-768 px) , keep the single column, but switch to large-style popup*/
+/* breakpoint at 600 px:
+    For less small phones/tablets (600-768 px) , keep the single column layout, but switch to large-style popup*/
 @media all and (min-width: 600px) {
     
     /* Styles for the detail popup - float the user info and description side-by-side */
@@ -141,7 +144,17 @@ td {
         max-width: 375px;
     }
 
-    /* Pretty animation effects. If you really hate them, we can take them out. */
+    .detail-user .name {
+        text-align: left
+    }
+
+    .detail-user .avatar {
+        padding-top: 10px;
+        padding-right: 10px;
+        text-align: left;
+    }
+
+    /* From now on, when going between layouts, use an animation. */
     #index .ui-listview .ui-btn {
         -webkit-transition: all 500ms ease;
         -moz-transition: all 500ms ease;
@@ -151,8 +164,9 @@ td {
     }
 }
 
-/* First breakpoint is 768px:
-	Switch to 2 column layout.  */
+/* breakpoint at 768 px:
+    For smallish desktops (768-1320) and large tablets, go to a two column layout.
+*/ 
 @media all and (min-width: 768px) {
     
     /* Styles for the detail popup - give a bit more space for everything to fit. */
@@ -169,7 +183,7 @@ td {
     /* Styles from tutorial code*/
     #index .ui-content {
         padding: 9px;
-    }	
+    }   
     
     #index .ui-listview .ui-li.ui-btn {
         float: left;
@@ -202,8 +216,7 @@ td {
     }
 }
 
-/* Second breakpoint:
-	Switch to 3 column layout. */
+/* For large desktops, go to large layout with three columns. */
 @media all and (min-width: 1320px){
     
     /* Styles from tutorial code*/
@@ -228,4 +241,3 @@ td {
         margin: 5px 5px;
     }
 }
-/* For this demo we used images with a size of 310x310 pixels. Just before the second breakpoint the images reach their max width: 1019px - 2 x 9px padding = 1001px x 30.9333% = ~310px */

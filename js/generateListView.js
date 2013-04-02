@@ -42,7 +42,7 @@ var generateListView = {
         shtml += this.generateTags(tweet);
         shtml += this.generateMentions(tweet);
         shtml += "</td>";
-        
+        shtml += "</tr><tr><td><br /></td>";
         // close the tags enclosing content
         shtml += "</tr></table></a></li>";
         return shtml;
