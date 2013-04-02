@@ -151,9 +151,7 @@ td {
     .detail-user .avatar {
         padding-top: 10px;
         padding-right: 10px;
-        clear: both;
-        text-align: left
-
+        text-align: left;
     }
 
     /* From now on, when going between layouts, use an animation. */
