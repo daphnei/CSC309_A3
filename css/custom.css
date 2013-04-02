@@ -180,9 +180,9 @@ td {
         max-width: 450px;
     }
 
-    /* Styles from tutorial code*/
+    /*padding for main listview area*/
     #index .ui-content {
-        padding: 9px;
+        padding-top: 8px;
     }   
     
     #index .ui-listview .ui-li.ui-btn {
@@ -221,7 +221,8 @@ td {
     
     /* Styles from tutorial code*/
     #index .ui-content {
-        padding: 10px;
+        padding-top: 8px;
+        padding-left: 10%;
     }
     
     /* Set a max-width for the last breakpoint to prevent too much stretching on large screens.
