@@ -46,10 +46,10 @@ var details = {
     generateDetailsContent: function(tweet) {
         var shtml = "";
 
-        shtml += "<h3>All tweets by this user:</h3>";
+        /*shtml += "<h3>All tweets by this user:</h3>";
         $.each(favorites.getAllTweets(tweet.user.name), function(tweet) {
             shtml += list.generateHTML(tweet);
-        });
+        });*/
 
         return shtml;
     }

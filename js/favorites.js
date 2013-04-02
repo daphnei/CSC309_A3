@@ -46,6 +46,8 @@ var favorites = {
                 data = {
                     text: tweet.text,
                     date: tweet.created_at,
+                    // need to refer to module by name since we're in a
+                    // different namespace in this callback
                     links: favorites.extractLinks(tweet),
                     photos: favorites.extractPhotos(tweet),
                     media: favorites.extractMedia(tweet),
@@ -65,14 +67,14 @@ var favorites = {
 
 
 	renderFavorites: function(target) {
-		var i = favorites.tweetIndex;
+		var i = this.tweetIndex;
 		
 		//iterate through the next batch of tweets to be rendered, but stop
 		//if we get to the end of the tweet list.
-		while ((i < favorites.tweetIndex + favorites.TWEETS_PER_SCROLL)
-				&& (i < favorites.tweets.length)) {
+		while ((i < this.tweetIndex + this.TWEETS_PER_SCROLL)
+				&& (i < this.tweets.length)) {
 					
-			var tweet = favorites.tweets[i];
+			var tweet = this.tweets[i];
 		
 			var html = list.generateHTML(tweet, i);
 			
@@ -92,7 +94,7 @@ var favorites = {
 			// Bind the function that will populate the image popup with purty pictures.
 			domTweet.find(".photo-button").click(function(event) {
 			
-			    tweet = favorites.getTweetObject($(this).parents(".tweet")[0]);
+			    tweet = this.getTweetObject($(this).parents(".tweet")[0]);
 			    
 			    if (tweet !== undefined) {
     			    var imageTag = "";
@@ -131,7 +133,7 @@ var favorites = {
      *          otherwise.
      */
 	unrenderedTweets: function() {
-		return favorites.tweetIndex < favorites.tweets.length; 	
+		return this.tweetIndex < this.tweets.length; 	
 	},
 
     /**
@@ -141,7 +143,7 @@ var favorites = {
      * @returns All the tweets made by the user.
      */
     getAllTweets: function(username) {
-        return .filter(function(tweet) {
+        return this.tweets.filter(function(tweet) {
             return tweet.user.name == username;
         });
     },
@@ -158,7 +160,7 @@ var favorites = {
     getTweetObject: function(domTweet) {
         // find the tweet this click landed on using the id
         var id = $(domTweet).attr("id");
-        var tweet = favorites.tweets[id];
+        var tweet = this.tweets[id];
         if (tweet === undefined) {
         	console.log("Could not find tweet with id: " + id);
         }
