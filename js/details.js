@@ -47,8 +47,8 @@ var generateDetails = {
         var shtml = "";
 
         var shtml += "<h3>All tweets by this user:</h3>";
-        $.each(getAllTweets(tweet.user.name, function(tweet) {
-            
+        $.each(favorites.getAllTweets(tweet.user.name, function(tweet) {
+            shtml += generateList.generateHTML(tweet);
         });
 
         return shtml;
