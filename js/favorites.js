@@ -74,7 +74,7 @@ var favorites = {
 					
 			var tweet = favorites.tweets[i];
 		
-			var html = generateListView.generateHTML(tweet, i);
+			var html = generateList.generateHTML(tweet, i);
 			
 			var domTweet = $(html);
 			
@@ -84,8 +84,8 @@ var favorites = {
 				tweet = favorites.getTweetObject(this);
                 
 				if (tweet !== undefined) {
-					//$("#details-header").html(generateDetailsView.generateDetailsHeader(tweet)); 
-					$("#details-content").html(generateDetailsView.generateDetailsContent(tweet));
+					//$("#details-header").html(generateDetails.generateDetailsHeader(tweet)); 
+					$("#details-content").html(generateDetails.generateDetailsContent(tweet));
 				}
 			});
 			
