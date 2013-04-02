@@ -82,7 +82,15 @@ var favorites = {
 			
 			// Bind the function that will populate the details dialog with delicious content.
 			domTweet.click(function(event) {
+                
+                // disable background scrolling
+                document.body.style.overflow = "hidden";
+                $("#details").bind({ popupafterclose: function(event, ui) {
+                        document.body.style.overflow = "auto";
+                    }
+                });
 
+                // display the tweet
 				tweet = favorites.getTweetObject(this);
                 
 				if (tweet !== undefined) {
