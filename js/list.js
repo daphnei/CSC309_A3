@@ -13,13 +13,18 @@ var list = {
 	 *               Note that loadFavorites follows a different, more concise
 	 *               format for storing data, so don't consult the Twitter API 
 	 *               when accessing data from it.
+     * @param canClick Whether or not the tweet can be clicked to display
+     *                 details.
 	 * @param index The index of the tweet. By default, equal to the number of
 	 *              tweets currently stored so far.
 	 *
 	 * @returns A string of HTML generated from the given tweet.
 	 */
-	generateHTML: function(tweet, index) {
+	generateHTML: function(tweet, canClick, index) {
 		
+        // by default, tweet can be clicked to show details.
+        canClick = (canClick !== undefined ? canClick : true);
+
 		// id for the tweet corresponds to its index in the favorite
 		// tweets list
 		var index = (index !== undefined ? index : favorites.tweets.length-1);
@@ -28,7 +33,8 @@ var list = {
 		// setup the tags enclosing the tweet content
 		var shtml = "";
 		shtml += "<li class='tweet' data-icon='false' id='" + id + "'>";
-		shtml += "<a href='#details' data-rel='popup'>";
+		if (canClick)
+            shtml += "<a href='#details' data-rel='popup'>";
 		shtml += "<table><tr>";
 		
 		// generate and add in all the tweet content
@@ -42,9 +48,15 @@ var list = {
 		shtml += this.generateTags(tweet);
 		shtml += this.generateMentions(tweet);
 		shtml += "</td>";
-		
+
+        // hacky fix shoving the clickbox on a tweet down a line,
+        // regardless of the tweet text size.
+        shtml += "</tr><tr><td><br /></td>";
 		// close the tags enclosing content
-		shtml += "</tr></table></a></li>";
+		shtml += "</tr></table>";
+        if (canClick)
+            shtml += "</a>";
+        shtml += "</li>";
 		return shtml;
 	},
 

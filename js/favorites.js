@@ -76,7 +76,7 @@ var favorites = {
 					
 			var tweet = this.tweets[i];
 		
-			var html = list.generateHTML(tweet, i);
+			var html = list.generateHTML(tweet, true, i);
 			
 			var domTweet = $(html);
 			

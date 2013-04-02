@@ -47,7 +47,7 @@ var details = {
         var shtml = "";
         
         $.each(favorites.getAllTweets(tweet.user.name), function(index, tweet) {
-            shtml += list.generateHTML(tweet);
+            shtml += list.generateHTML(tweet, false);
         });
 
         return shtml;
