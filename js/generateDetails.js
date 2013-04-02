@@ -7,19 +7,9 @@ var generateDetails = {
     /**
      * Generates HTML for the header of the details dialog.
      * 
-     * @param tweet The tweet that you're getting the details for (?).
+     * @param tweet The tweet that you're getting the details for.
      */
     generateDetailsHeader: function(tweet) {
-        return "";//generateListView.generateText(tweet);
-        //return "<h4>" + tweet.user.name + " tweets: </h4>";
-    },
-    
-    /**
-     * Generates HTML for the content of the details dialog.
-     * 
-     * @param tweet The tweet that you're getting the details for (?).
-     */
-    generateDetailsContent: function(tweet) {
         var shtml = "";
         shtml += "<div class='detail-user'>";
         shtml += "<div class='avatar'><img src='" + tweet.user.image + "'/></div>";
@@ -45,6 +35,22 @@ var generateDetails = {
         shtml += "</p>";
         shtml += "</div>";
         shtml += "<div class='clear-both'></div>";
+        return shtml;
+    },
+    
+    /**
+     * Generates HTML for the content of the details dialog.
+     * 
+     * @param tweet The tweet that you're getting the details for.
+     */
+    generateDetailsContent: function(tweet) {
+        var shtml = "";
+
+        var shtml += "<h3>All tweets by this user:</h3>";
+        $.each(getAllTweets(tweet.user.name, function(tweet) {
+            
+        });
+
         return shtml;
     }
 };

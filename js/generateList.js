@@ -62,7 +62,7 @@ var generateList = {
 		
 		var shtml = "";
 		shtml += "<p><span class='name'>" + name + "</span>";
-		shtml += "<a class='usertag' href='" + account + "'>@" + screen_name;
+		shtml += "<a class='usertag' href='" + account + "' target='_blank'>@" + screen_name;
 		shtml += "</a></p>";
 		return shtml;
 	},

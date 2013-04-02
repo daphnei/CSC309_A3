@@ -84,7 +84,7 @@ var favorites = {
 				tweet = favorites.getTweetObject(this);
                 
 				if (tweet !== undefined) {
-					//$("#details-header").html(generateDetails.generateDetailsHeader(tweet)); 
+					$("#details-header").html(generateDetails.generateDetailsHeader(tweet)); 
 					$("#details-content").html(generateDetails.generateDetailsContent(tweet));
 				}
 			});
@@ -124,9 +124,27 @@ var favorites = {
 		favorites.tweetIndex += favorites.TWEETS_PER_SCROLL;
 	},
 
+    /**
+     * Get whether or not there are tweets left to be rendered.
+     *
+     * @returns true if there are tweets left to be rendered, false
+     *          otherwise.
+     */
 	unrenderedTweets: function() {
 		return favorites.tweetIndex < favorites.tweets.length; 	
 	},
+
+    /**
+     * Get all the tweets by a given user.
+     * @param username The user to get all the tweets from.
+     *
+     * @returns All the tweets made by the user.
+     */
+    getAllTweets: function(username) {
+        return favorites.filter(function(tweet) {
+            return tweet.user.name == username;
+        });
+    }
 
     /* "PRIVATE" */
     
