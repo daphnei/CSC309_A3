@@ -1,7 +1,3 @@
-/* I got rid of the prof's sample resizing CSS that should go here. We
- * should look at this code and actually learn how it works, and add it
- * back in again later*/
-
 /* The person's name, to the left or top of the @ user tag. */
 .name {
     font-size: 16px;
@@ -15,24 +11,20 @@
 
 /*Make all tags and links appear in small gray like Twitter does*/
 .usertag {
-	color:rgb(200,200,200);
-	font-size: 14px;
-	text-decoration:none;
+    color:rgb(200,200,200);
+    font-size: 14px;
+    text-decoration:none;
 }
 
 /*Make all tags and links appear in small gray like Twitter does*/
 .mention, .hashtag, .tweetlink {
-	color:#0084b4;
-	text-decoration:none;
+    color:#0084b4;
+    text-decoration:none;
 }
 
 /* For formatting the date for each tweet*/
 .date {
-	color:rgb(200,200,200);
-}
-
-.li {
-	padding-left: 60px;
+    color:rgb(200,200,200);
 }
 
 /* Don't let text overflow in the tweets. */
@@ -64,57 +56,32 @@ td {
 .end-notification p {
     text-align: center;
     font-size: 12px;
-    color: #111111;
+    color: #ffffff;
 }
 
-.jqm-footer p {
-    margin-left: 25px;
-    font-size: 11px;
-    color: #111111;
-}
 /* Custom icon for showing photos. */
 .ui-icon-camera {
     background-image: url("../res/camera.png")
 }
 
-/* For very small phones change the formatting the popup*/ 
-@media all and (max-width: 500px){
-	
-	/*Make the borders smaller than the default when on smaller screens */
-	.ui-li .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li {
-		display: block;
-		padding-left: 5px;
-	}
-	
-	/* Display the in-tweet name and the user tag on their own line on small screens */
-	.tweet .name {
-	    display: block;
-	}
-	
-	.tweet .usertag {
-	    padding-top: .1em;
-	    display: block;
-	}
-	
-    /* Styles for the detail dialog */
-    .detail-user {
-        max-width: 75px;
-        float: none;
-        clear: both;
-    }
-    
-    .detail-text {
-        max-width: 375px;
-        float: none;
-        clear: both;
-    }
-    
-    .detail-user .avatar {
-        float: left;
-        padding-right: 10px;
-    }
+<<<<<<< HEAD
+=======
+#index .ui-listview .ui-icon {
+    background-color: transparent;
+}
+>>>>>>> 776651899349bec0c0820290928d2e8b8993028f
 
-    /* when the screen is very small reduce padding at top and bottom*/
+/* For very small phones: 
+    decrease padding and put usertag and twwet on separate lines*/ 
+@media all and (max-width: 500px){
+    
+    /*Make the borders smaller than the default*/
+    .ui-li .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li {
+        display: block;
+        padding-left: 5px;
+    }
+    
+    /* reduce padding at top and bottom*/
     .ui-content {
         border-width: 0;
         overflow-x: hidden;
@@ -124,14 +91,58 @@ td {
         padding-top: 0px;
         padding-bottom: 0px;
     }
+
+    /* Display the in-tweet name and the user tag on their own line on small screens */
+    .tweet .name {
+        display: block;
+    }
+    
+    .tweet .usertag {
+        padding-top: .1em;
+        display: block;
+    }
+}  
+
+/* info popups will apear on multiple lines for smaller screens */
+@media all {
+    
+    /* Styles for the detail dialog */
+    .detail-user {
+        // Center the view
+        margin-left: auto;
+        margin-right: auto;
+        
+        float: none;
+        text-align: center;
+    }
+    
+    .detail-text {
+        max-width: 375px;
+        float: none;
+        word-wrap: break-word;
+    }
+    
+    .detail-user .avatar {
+        padding-top: 10px;
+        padding-right: 10px;
+        text-align: center;
+    }
+    
+    .detail-user .name {
+        word-wrap: break-word;
+    }
+
+    /* Format the tweets in the dialog to be scrollable
+       with max height 200px for small screens. */
+    #user-tweets {
+        overflow-y: scroll;
+        max-height: 200px;
+        -webkit-overflow-scrolling: touch;
+    }
 }
 
-/*for screens between 500 and 600 pixels, the popups should still be in the small format, the 
-listview should still be one column, but don't impose the padding restriction that the above 
-media query puts in*/
-
-/* zeroth breakpoint is 600 px:
-	For less small phones/tablets (600-768 px) , keep the single column, but switch to large-style popup*/
+/* breakpoint at 600 px:
+    For less small phones/tablets (600-768 px) , keep the single column layout, but switch to large-style popup*/
 @media all and (min-width: 600px) {
     
     /* Styles for the detail popup - float the user info and description side-by-side */
@@ -145,7 +156,18 @@ media query puts in*/
         max-width: 375px;
     }
 
-    /* Pretty animation effects. If you really hate them, we can take them out. */
+    .detail-user .name {
+        text-align: left
+    }
+
+
+    .detail-user .avatar {
+        padding-top: 10px;
+        padding-right: 10px;
+        text-align: left;
+    }
+
+    /* From now on, when going between layouts, use an animation. */
     #index .ui-listview .ui-btn {
         -webkit-transition: all 500ms ease;
         -moz-transition: all 500ms ease;
@@ -153,10 +175,12 @@ media query puts in*/
         -ms-transition: all 500ms ease;
         transition: all 500ms ease;
     }
+
 }
 
-/* First breakpoint is 768px:
-	Switch to 2 column layout.  */
+/* breakpoint at 768 px:
+    For smallish desktops (768-1320) and large tablets, go to a two column layout.
+*/ 
 @media all and (min-width: 768px) {
     
     /* Styles for the detail popup - give a bit more space for everything to fit. */
@@ -170,12 +194,12 @@ media query puts in*/
         max-width: 450px;
     }
 
-    /* Styles from tutorial code*/
-    #index .ui-content {
-        padding: 9px;
-    }	
+    /*padding for main listview area*/
+    #main-body .ui-content {
+        padding-top: 8px;
+    }   
     
-    #index .ui-listview .ui-li.ui-btn {
+    #main-body .ui-listview .ui-li.ui-btn {
         float: left;
         width: 47%; /* 33.3333% incl. 2 x 1.2% margin */
         height: 115px;
@@ -183,15 +207,15 @@ media query puts in*/
         border-width: 0; /* The 1px border would break the layout so we set it on .ui-btn-inner instead. */
     }
 
-    /* Inherit the border-radius from the top left list item. Ensures that all items have pretty rounded corners. */
-    #index .ui-listview .ui-li,
-    #index .ui-listview .ui-btn-text,
-    #index .ui-listview .ui-link-inherit {
+    /* Inherit the border-radius from the top left list item. Ensures that all main-body have pretty rounded corners. */
+    #main-body .ui-listview .ui-li,
+    #main-body .ui-listview .ui-btn-text,
+    #main-body .ui-listview .ui-link-inherit {
         -webkit-border-radius: inherit;
         border-radius: inherit;
     }
 
-    /* Add shadow to listview items. */
+    /* Add shadow to listview main-body. */
     .my-page .ui-listview .ui-btn:not(.ui-focus) {
         -moz-box-shadow: 0px 0px 9px #111;
         -webkit-box-shadow: 0px 0px 9px #111;
@@ -204,21 +228,29 @@ media query puts in*/
         -webkit-box-shadow: 0px 0px 12px #387bbe;
         box-shadow: 0px 0px 12px #387bbe;
     }
+
+    /* Format the tweets in the dialog to be scrollable
+       with max height 300px for larger screens. */
+    #user-tweets {
+        overflow-y: scroll;
+        max-height: 400px;
+    }
+
 }
 
-/* Second breakpoint:
-	Switch to 3 column layout. */
+/* For large desktops, go to large layout with three columns. */
 @media all and (min-width: 1320px){
     
     /* Styles from tutorial code*/
-    #index .ui-content {
-        padding: 10px;
+    #main-body .ui-content {
+        padding-top: 8px;
+        padding-left: 10%;
     }
     
     /* Set a max-width for the last breakpoint to prevent too much stretching on large screens.
     By setting the max-width equal to the breakpoint width minus padding we keep square tiles. */
     
-    #index .ui-listview {
+    #main-body .ui-listview {
         max-width: 1300px;
         margin: 0 auto;
     }
@@ -226,15 +258,13 @@ media query puts in*/
     /* Because of the 1000px max-width the width will always be 230px (and margin left/right 10px),
     but we stick to percentage values for demo purposes. */
     
-    #index .ui-listview .ui-li.ui-btn {
-<<<<<<< HEAD
+    #main-body .ui-listview .ui-li.ui-btn {
         width: 30%;
         height: 115px;
-=======
-        width: 32%;
-        height: 110px;
->>>>>>> 776723aba809e789d25a75d37b3ba07668c3f497
         margin: 5px 5px;
     }
+    
+    #user-tweets {
+        max-width: 800px;
+    }
 }
-/* For this demo we used images with a size of 310x310 pixels. Just before the second breakpoint the images reach their max width: 1019px - 2 x 9px padding = 1001px x 30.9333% = ~310px */

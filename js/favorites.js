@@ -14,55 +14,53 @@ var favorites = {
 
     /**
      * Load a user's favorite tweets.
-     * @param file A JSON filename to load favorites from.
+     * @param data JSON data to load the favorite tweets from.
      * @param target A descriptor of a listview to populate with the loaded 
      *               favorite tweets.
      *
      * @returns A list of tweet JSON objects. The format of this object is 
      *          different from that of the Twitter API's returned objects.
      */
-    loadFavorites: function(file, target) {
-		$.getJSON(file, function(data) {
+    loadFavorites: function(data, target) {
 
-            // go through each tweet in the file, extract the info we need, and
-            // append it to the target's html.
-            $.each(data, function(tweet) {
-                tweet = this; 
-                var user, data;
-                
-                // extract user info
-                user = {
-                    name: tweet.user.name,
-                    screen_name: tweet.user.screen_name,
-                    location: tweet.user.location.length > 0? tweet.user.location : null,
-                    description: tweet.user.description,
-                    website: tweet.user.url,
-                    account: "http://twitter.com/" + tweet.user.screen_name,
-                    background: tweet.user.profile_background_image_url, 
-                    image: tweet.user.profile_image_url
-                };
-                
-                // extract tweet data info
-                data = {
-                    text: tweet.text,
-                    date: tweet.created_at,
-                    // need to refer to module by name since we're in a
-                    // different namespace in this callback
-                    links: favorites.extractLinks(tweet),
-                    photos: favorites.extractPhotos(tweet),
-                    media: favorites.extractMedia(tweet),
-                    mentions: favorites.extractMentions(tweet),
-                    hashtags: favorites.extractTags(tweet)
-                };
-                
-                // package the tweet, add html for it and refresh
-                var tweet = { user: user, data: data };
-                favorites.tweets.push(tweet);
-			});
-                            
-			//render the first batch of tweets
-			favorites.renderFavorites(target);
+        // go through each tweet in the file, extract the info we need, and
+        // append it to the target's html.
+        $.each(data, function(tweet) {
+            tweet = this; 
+            var user, data;
+            
+            // extract user info
+            user = {
+                name: tweet.user.name,
+                screen_name: tweet.user.screen_name,
+                location: tweet.user.location.length > 0? tweet.user.location : null,
+                description: tweet.user.description,
+                website: tweet.user.url,
+                account: "http://twitter.com/" + tweet.user.screen_name,
+                background: tweet.user.profile_background_image_url, 
+                image: tweet.user.profile_image_url
+            };
+            
+            // extract tweet data info
+            data = {
+                text: tweet.text,
+                date: tweet.created_at,
+                // need to refer to module by name since we're in a
+                // different namespace in this callback
+                links: favorites.extractLinks(tweet),
+                photos: favorites.extractPhotos(tweet),
+                media: favorites.extractMedia(tweet),
+                mentions: favorites.extractMentions(tweet),
+                hashtags: favorites.extractTags(tweet)
+            };
+            
+            // package the tweet, add html for it and refresh
+            var tweet = { user: user, data: data };
+            favorites.tweets.push(tweet);
         });
+                        
+        //render the first batch of tweets
+        favorites.renderFavorites(target);
     },
 
 
