@@ -113,9 +113,8 @@ td {
     }
     
     .detail-text {
-        max-width: inherit;
+        max-width: 375px;
         float: none;
-        color: red;
         word-wrap: break-word;
     }
     
@@ -141,8 +140,8 @@ td {
     }
     
     .detail-text {
-        max-width: inherit;
-        color: green;
+        float: right;
+        max-width: 375px;
     }
 
     .detail-user .name {
@@ -179,8 +178,8 @@ td {
     }
     
     .detail-text {
-        max-width: inherit;
-        color: blue;
+        float: right;
+        max-width: 450px;
     }
 
     /* Styles from tutorial code*/
