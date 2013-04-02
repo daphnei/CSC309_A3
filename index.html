@@ -2,31 +2,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Flutter</title>
-	
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile.structure-1.3.0.min.css" />
-	<link rel="stylesheet" href="css/themes/Flutter.min.css" />
-	<link rel="stylesheet" href="css/custom.css">
-		
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
-	
-	<!-- User Scripts -->
-	<script src="js/helper.js"></script>
-	<script src="js/list.js"></script>
-	<script src="js/details.js"></script>
-	<script src="js/favorites.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flutter</title>
+    
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile.structure-1.3.0.min.css" />
+    <link rel="stylesheet" href="css/themes/Flutter.min.css" />
+    <link rel="stylesheet" href="css/custom.css">
+        
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+    
+    <!-- User Scripts -->
+    <script src="js/helper.js"></script>
+    <script src="js/list.js"></script>
+    <script src="js/details.js"></script>
+    <script src="js/favorites.js"></script>
     <script src="js/resize.js"></script>
 </head>
 <body>
     <div data-role="page" id="index" data-theme="a">
-        
         <!-- HEADER -->
-		<div data-role="header" data-id="mobile-header">
+        <div data-role="header" data-id="mobile-header">
             <h1>Flutter</h1>
-            <a href='#' data-icon='false' data-role='button' class='photo-button'>Link new Favorites file</a>
+            <a href='#newJSON' data-rel='popup' data-icon='false' data-role='button'>Link new Favorites file</a>
         </div>
         <!-- MAIN BODY -->
         <div data-role="content">
@@ -36,14 +35,14 @@
         </div>
 
         <!-- FOOTER -->
-		<div class="end-notification" data-role="footer">
-			<!-- Notification that user has reached end of tweets -->
-		</div>
+        <div class="end-notification" data-role="footer">
+            <!-- Notification that user has reached end of tweets -->
+        </div>
         
-		<!-- POPUPS -->
-        <!-- TWEETER DETAILS POPUP -->
+        <!-- POPUPS -->
+        <!-- Tweeter details popup -->
         <div data-role="popup" data-theme="b" data-overlay-theme="b" id="details" class="ui-corner-all" data-transition="pop"  data-position-to="window">
-        	<div data-role="content" class="ui-content">
+            <div data-role="content" class="ui-content">
                 <div id="details-header">
                     <!-- Dynamic popup header will be loaded here. -->
                 </div>
@@ -55,6 +54,20 @@
             <a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right ">Close</a>
         </div>
 
+        <!-- New JSON popup -->
+        <div data-role="popup" data-theme="b" data-overlay-theme="b" id="newJSON" class="ui-corner-all" data-transition="pop"  data-position-to="window">
+            <div data-role="content" class="ui-content">
+                <div data-role="content" class="ui-content">
+                <form>
+                    <label for="JSON_input">Enter the URL for a new favorites JSON file:</label>
+                    <input type="text" name="JSON_input" id="JSON_input" value="http://"  onclick="this.select()" >
+                    <button value="submitJSON" name="submit" data-icon="check" type="submit" onClick="parse(this.form)">Submit</button>
+                    <a href="#" data-rel="back" data-role="button" data-icon="delete" class="ui-btn-right">Cancel</a>
+
+                </form>
+            </div>
+        </div>
+
         <!-- Image popup -->
         <div data-role="popup" data-corners="false". data-transition="pop" id="popupPhoto" data-position-to="window" data-overlay-theme="a">
             <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
@@ -62,28 +75,34 @@
                 <!-- Images will be loaded here-->
             </div>
         </div>
-	</div>
-	<div id="page_end"></div>
+    </div>
+    <div id="page_end"></div>
 </body>
 </html>
 
 <script>
-	window.onload=function(){
-        favorites.loadFavorites('scripts/myfaves.json', '#items');
+    parse = function(form) {
+        var newJSON = form.JSON_input.value;
+        //parse into actual JSON
+        favorites.loadFavorites(newJSONurl, '#items');
+    }
+
+    window.onload=function(){
+        favorites.loadFavorites('favs.json', '#items');
     }
     
     setInterval(function() {
-		if($(window).scrollTop() + $(window).height() >= $(document).height() - 200) {
-			if (favorites.unrenderedTweets()) {
-				favorites.renderFavorites('#items');
-				$(".end-notification").html("");
-			} else {
+        if($(window).scrollTop() + $(window).height() >= $(document).height() - 200) {
+            if (favorites.unrenderedTweets()) {
+                favorites.renderFavorites('#items');
+                $(".end-notification").html("");
+            } else {
             $(".end-notification").html("<p>No more tweets :(</p>");
-			}
-		}
-	}, 200);
+            }
+        }
+    }, 200);
 
-    //This does not work. Why?
+    //Scale photo popup
     $("#index").on( "pageinit", function() {
                 $( "#popupPhoto" ).on({
                     popupbeforeposition: function() {
@@ -94,4 +113,3 @@
             });
 
 </script>
-

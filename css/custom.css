@@ -1,7 +1,3 @@
-/* I got rid of the prof's sample resizing CSS that should go here. We
- * should look at this code and actually learn how it works, and add it
- * back in again later*/
-
 /* The person's name, to the left or top of the @ user tag. */
 .name {
     font-size: 16px;
