@@ -24,6 +24,10 @@ The site is divided into one main view and three popups.
 The main view lists all the favorited tweets that have been imported into the
 app. By default, the client loads tweets from the local "favs.json" file in 
 the top folder, but more tweets can be imported using the "Load More" button.
+Rather than using normal pagination for displaying the tweets, they are loaded
+in batches as the user scrolls down. This allows the user to check the tweets 
+without interruptions, while still being able to load the page without loading
+all of the tweets.
 
 When the user clicks on the Load More button, a popup appears displaying a basic
 form where the user can input JSON to be loaded into the app, or cancel to
@@ -54,5 +58,5 @@ There are four layouts for the website defined using CSS media queries:
 4. A view for high resolution monitors, where the tweets are split into three
    side-by-side columns.
 
-This helps to make the website compatible with and look nice on a
-wide range of devices.
+This helps to make the website compatible with and look nice on a wide range 
+of devices.
