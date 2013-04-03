@@ -1,3 +1,35 @@
+commit ea94ada64e5b02e5436b89f2d7c0066abdfe6bd0
+Merge: 2d2c265 d094fb5
+Author: akbiggs <alex.biggs@utoronto.ca>
+Date:   Tue Apr 2 23:02:29 2013 -0400
+
+    Merge branch 'master' of github.com:daphnei/CSC309_A3
+
+commit 2d2c26595dfd0d35bad9ce77cf3aea461eaf5683
+Author: akbiggs <alex.biggs@utoronto.ca>
+Date:   Tue Apr 2 23:02:09 2013 -0400
+
+    Removed unused JS file, fixed bug photo bug
+
+commit d094fb514b73bf8f21f89142980e99d9f0b7ce53
+Merge: 6bb8974 12eff2e
+Author: Gabriel B. Nunes <alchemicvisions@gmail.com>
+Date:   Tue Apr 2 22:59:00 2013 -0400
+
+    Merge branch 'master' of https://github.com/daphnei/CSC309_A3
+
+commit 6bb8974a38732f10b5e102be2882fee3d6802a6c
+Author: Gabriel B. Nunes <alchemicvisions@gmail.com>
+Date:   Tue Apr 2 22:58:40 2013 -0400
+
+    Fix problems with image popups on small screens that are horizontally constrained.
+
+commit 12eff2e0cca529feaba2110719e957f5614b1260
+Author: Daphne <daphneipp@gmail.com>
+Date:   Tue Apr 2 22:21:59 2013 -0400
+
+    uncommented line in list.js
+
 commit d8a10384d9485a2a5167d119d57440d0450e1e15
 Author: akbiggs <alex.biggs@utoronto.ca>
 Date:   Tue Apr 2 21:39:35 2013 -0400
