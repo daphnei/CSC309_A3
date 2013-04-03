@@ -15,10 +15,14 @@ DEFAULT_LIMIT = 180
 # Substitute your own keys and what-not here if you want to use an account other
 # than Alex's
 ACCOUNT = "SecretofMana"
-CONSUMER_KEY = "7AGVFcEZ0E8xXDHEYyp3g"
-CONSUMER_SECRET = "9e3I5QkHiBNfvCpD6PZcwC1WBU3rVfik9Tg5A0XI"
-ACCESS_KEY = "15173530-ncJy4HXyz6RLgZLBJWIRuD3iwI7F5NhIxeLn5t4Qc"
-ACCESS_SECRET = "LZn4Wcfq9GN3bLAbBVwUlqEiE96FhT9FRYmYpQems0"
+
+# KEYS REVOKED FOR SECURITY.
+# If you want to use this script, supply your own OAuth keys and account name
+# from Twitter.
+CONSUMER_KEY = ""
+CONSUMER_SECRET = ""
+ACCESS_KEY = ""
+ACCESS_SECRET = ""
 
 twitter = Twython(app_key=CONSUMER_KEY,
         app_secret=CONSUMER_SECRET,
