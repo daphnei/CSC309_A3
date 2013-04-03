@@ -82,7 +82,10 @@ var favorites = {
 			domTweet.click(function(event) {
                 
                 // disable background scrolling
-                document.body.style.overflow = "hidden";
+                $("#details").bind({ popupafteropen: function(event, ui) {
+                        document.body.style.overflow = "hidden";
+                    }
+                });
                 $("#details").bind({ popupafterclose: function(event, ui) {
                         document.body.style.overflow = "auto";
                     }
