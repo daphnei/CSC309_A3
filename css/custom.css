@@ -64,7 +64,7 @@ td {
 }
 
 /* Custom icon for showing photos. */
-.ui-icon-camera {
+.ui-icon-camera, #user-tweets .ui-icon-camera {
     background-image: url("../res/camera.png")
 }
 

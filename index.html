@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="css/themes/Flutter.min.css" />
     <link rel="stylesheet" href="css/custom.css">
         
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
     
     <!-- User Scripts -->
     <script src="js/helper.js"></script>
@@ -60,12 +60,14 @@
 
         <!-- New JSON popup -->
         <div data-role="popup" data-theme="b" data-overlay-theme="b" id="newJSON" class="ui-corner-all" data-transition="pop"  data-position-to="window">
+            <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
             <div data-role="content" class="ui-content">
                 <div data-role="content" class="ui-content">
                     <label for="JSON_input">Copy and paste JSON for new favorites into the box.</label>
                     <input type="text" name="JSON_input" id="JSON_input" value="copy JSON here"  onclick="this.select()" >
                     <button value="submitJSON" name="submit_button"
-                        data-icon="check" onClick="parseNewJSON('#JSON_input')">Submit</button>
+                        data-icon="check" onClick="parseNewJSON('#JSON_input');
+                        $('#newJSON').popup('close')">Submit</button>
                     <a href="#" data-rel="back" data-role="button" data-icon="delete" class="ui-btn-right">Cancel</a>
 
             </div>
@@ -106,7 +108,7 @@
                 favorites.renderFavorites('#items');
                 $(".end-notification").html("");
             } else {
-            $(".end-notification").html("<p>No more tweets :(</p>");
+                $(".end-notification").html("<p>No more tweets :(</p>");
             }
         }
     }, 200);

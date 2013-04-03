@@ -42,7 +42,7 @@ var list = {
 		shtml += "<td>";
 		shtml += this.generateName(tweet);
 		shtml += this.generateText(tweet);
-		shtml += this.generateDateAndImageButton(tweet);
+		shtml += this.generateDateAndImageButton(tweet, !canClick);
 		//shtml += this.generateImages(tweet);
 		shtml += this.generateLinks(tweet);
 		shtml += this.generateTags(tweet);
@@ -176,14 +176,17 @@ var list = {
 	 * Generate both the date and the button for displaying the image of a tweet.
 	 * Included in the same function for easier formatting.
 	 * @param tweet The tweet to generate HTML for.
+     * @param inPop Whether or not this is being generated inside a popup.
+     *              Used to determine if the other popup should be closed on
+     *              displaying an image.
 	 *
 	 * @returns HTML generated for the date and image of the tweet.
 	 */
-	generateDateAndImageButton: function(tweet) {
+	generateDateAndImageButton: function(tweet, inPop) {
 		var tweetDate = new Date(tweet.data.date);
 		var dateText = tweetDate.getDate() + " " + MONTHS[tweetDate.getUTCMonth()] + ", " + tweetDate.getFullYear();
 
-		var shtml = "<p class=date>Posted on " + dateText + this.generateImages(tweet) + "</p>";
+		var shtml = "<p class=date>Posted on " + dateText + this.generateImages(tweet, inPop) + "</p>";
 		
 		return shtml;
 	},
@@ -191,15 +194,18 @@ var list = {
 	/**
 	 * Generate the image button displaying the image associated with a tweet.
 	 * @param tweet The tweet to generate HTML for.
-	 *
+	 * @param inPop Whether or not this image button is being generated inside
+     *              another popup.
+     *
 	 * @returns HTML generated for the image button displaying the image
 	 * 			associated with the tweet, or an empty string if there is no
 	 *			image in the tweet.
 	 */
-	generateImages: function(tweet) {
-		if (tweet.data.photos.length > 0)  {
-			var shtml = "<a href='#' data-icon='camera' data-iconpos='notext' data-role='button'" +
-				" data-mini='true' data-inline='true' class='photo-button'>View Photo</a>";
+	generateImages: function(tweet, inPop) {
+		if (tweet.data.photos.length > 0 && !inPop)  {
+			var shtml = "<a href='#' data-icon='camera' data-iconpos='notext' " +
+                "data-role='button' data-mini='true' data-inline='true' class='photo-button'>" +
+                "View Photo</a>";
 			return shtml;
 		}
 
