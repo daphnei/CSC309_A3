@@ -118,6 +118,8 @@
                     popupbeforeposition: function() {
                         var maxHeight = $( window ).height() - 60 + "px";
                         $( "#popupPhoto img" ).css( "max-height", maxHeight );
+                        var maxWidth = $( window ).width() - 60 + "px";
+                        $( "#popupPhoto img" ).css( "max-width", maxWidth );
                     }
                 });
             });
