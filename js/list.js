@@ -51,7 +51,7 @@ var list = {
 
         // hacky fix shoving the clickbox on a tweet down a line,
         // regardless of the tweet text size.
-        // shtml += "</tr><tr><td><br /></td>";
+        if (canClick) shtml += "</tr><tr><td><br /></td>";
 		// close the tags enclosing content
 		shtml += "</tr></table>";
         if (canClick)
